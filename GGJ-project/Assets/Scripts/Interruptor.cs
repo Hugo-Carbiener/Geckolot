@@ -25,17 +25,19 @@ public class Interruptor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if ( col.tag == "player") {
+        if ( col.tag == "Player") {
             onInterruptor ++;
-            // TODO send a message to the game manager
-            Debug.Log("Player(s) on interruptor");
+            if (onInterruptor == 1)
+            {
+                // TODO send a message to the game manager
+                Debug.Log("Player(s) on interruptor");
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if ( col.tag == "player") {
+        if ( col.tag == "Player") {
             onInterruptor--;
             if ( onInterruptor == 0) {
                 // TODO send a message to the game manager
