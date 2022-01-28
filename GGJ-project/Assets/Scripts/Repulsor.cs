@@ -19,6 +19,7 @@ public class Repulsor : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(Vector2.Distance(ally.position, player.position));
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.S))
         {
             isRepulsing = true;
@@ -29,7 +30,7 @@ public class Repulsor : MonoBehaviour
         }
         if(isRepulsing)
         {
-            Vector2 dir = ally.position - player.position;
+            Vector2 dir = (ally.position - player.position) / Vector2.Distance(ally.position, player.position);
             allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
         }
     }

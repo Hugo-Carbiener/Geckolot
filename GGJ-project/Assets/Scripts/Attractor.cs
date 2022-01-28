@@ -29,7 +29,7 @@ public class Attractor : MonoBehaviour
         }
         if (isAttracting)
         {
-            Vector2 dir =  - (ally.position - player.position);
+            Vector2 dir =  - (ally.position - player.position) / Vector2.Distance(ally.position, player.position);
             allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
         }
     }
