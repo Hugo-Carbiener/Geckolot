@@ -17,20 +17,12 @@ public class Repulsor : MonoBehaviour
         allyRb = ally.GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Debug.Log(Vector2.Distance(ally.position, player.position));
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.RightControl))
         {
-            isRepulsing = true;
-        }
-        if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S))
-        {
-            isRepulsing = false;
-        }
-        if(isRepulsing)
-        {
-            Vector2 dir = (ally.position - player.position) / Vector2.Distance(ally.position, player.position);
+            Vector2 dir = (ally.position - player.position) / Vector3.Distance(ally.position, player.position);
+            dir *= 1 / Vector2.Distance(ally.position, player.position);
             allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
         }
     }

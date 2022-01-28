@@ -17,19 +17,12 @@ public class Attractor : MonoBehaviour
         allyRb = ally.GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.Space))
         {
-            isAttracting = true;
-        }
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S))
-        {
-            isAttracting = false;
-        }
-        if (isAttracting)
-        {
-            Vector2 dir =  - (ally.position - player.position) / Vector2.Distance(ally.position, player.position);
+            Vector2 dir = - (ally.position - player.position) / Vector3.Distance(ally.position, player.position);
+            dir *= 1 / Vector2.Distance(ally.position, player.position);
             allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
         }
     }

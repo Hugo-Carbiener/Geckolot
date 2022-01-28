@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: jumpForce
-      value: 5
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: isAttractor
@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6059710650297013196, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 6059710650297013196, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ca63d146d2066439cff1bc44557b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repulsionIntensity: 0.1
+  repulsionIntensity: 20
   ally: {fileID: 2118055305}
 --- !u!1001 &843004397
 PrefabInstance:
@@ -306,13 +306,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152386463932251493, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fec317be5adb8ab4e92c0c71986c6916, type: 2}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: jumpForce
-      value: 5
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: isAttractor
@@ -382,7 +386,7 @@ GameObject:
   - component: {fileID: 1739104793}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bafa9befe9a11e949b3d7a4c0708315e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionIntensity: 0.1
+  attractionIntensity: 20
   ally: {fileID: 734068421}
 --- !u!4 &2118055305 stripped
 Transform:
