@@ -72,4 +72,9 @@ public class PlayerController : MonoBehaviour
             isGrounded=true;
         }
     }
+
+    public void Reset()
+    {
+        
+    }
 }
