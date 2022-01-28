@@ -73,8 +73,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Reset()
+    //the function that handles the reset of the player
+    public void ResetPlayer(Vector2 position)
     {
-        
+        gameObject.transform.position=position;
     }
 }
