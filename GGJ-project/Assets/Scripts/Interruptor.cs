@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interruptor : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +19,19 @@ public class Interruptor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // TODO send a message to the game manager
-        Debug.Log("Player on button");
+        
+        if ( col.tag == "player") {
+            // TODO send a message to the game manager
+            Debug.Log("Player on button");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        // TODO send a message to the game manager
-        Debug.Log("Player not on button");
+        if ( col.tag == "player") {
+            // TODO send a message to the game manager
+            Debug.Log("Player not on button");
+        }
+
     }
 }
