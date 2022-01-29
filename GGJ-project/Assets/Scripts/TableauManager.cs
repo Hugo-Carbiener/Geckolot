@@ -7,6 +7,8 @@ public class TableauManager : MonoBehaviour
     [SerializeField] private GameObject[] resetableObjects;
     [SerializeField] private GameObject attractorSpawnPoint;
     [SerializeField] private GameObject repulsorSpawnPoint;
+    private GameManager gameManager;
+    private int interruptorState = 0;
     public void ResetTableau()
     {
         foreach (var r in resetableObjects)
@@ -16,6 +18,10 @@ public class TableauManager : MonoBehaviour
         }
     }
 
+    public void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     public void Activate()
     {
         this.enabled = false;
@@ -35,4 +41,19 @@ public class TableauManager : MonoBehaviour
     {
         return this.repulsorSpawnPoint.transform.position;
     }
+
+    public void interruptorOn()
+    {
+        interruptorState++;
+        if (interruptorState == 2)
+        {
+            gameManager.NextTableau();
+        }
+    }
+
+    public void interruptorOff()
+    {
+        interruptorState--;
+    }
+
 }

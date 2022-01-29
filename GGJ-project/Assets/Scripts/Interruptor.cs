@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Interruptor : MonoBehaviour
 {
-    // The game object which receive interruptor message
-    // [SerializeField] GameManager gm;
+
+    [SerializeField] private TableauManager tableau;
+    [SerializeField] private GameObject on;
+    [SerializeField] private GameObject off;
 
     // number of player on the Interruptor
     private int onInterruptor;
@@ -28,7 +30,9 @@ public class Interruptor : MonoBehaviour
             onInterruptor ++;
             if (onInterruptor == 1)
             {
-    //            gm.onInterruptorActivation();
+                on.SetActive(true);
+                off.SetActive(false);
+                tableau.interruptorOn();
             }
         }
     }
@@ -39,7 +43,9 @@ public class Interruptor : MonoBehaviour
             onInterruptor--;
             if ( onInterruptor == 0) 
             {
-     //           gm.onInterruptorActivation();
+                off.SetActive(true);
+                on.SetActive(false);
+               tableau.interruptorOff();
             }
         }
     }

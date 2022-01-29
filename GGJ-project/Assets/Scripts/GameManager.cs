@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     
     public void ResetProcedure()
     {
+        //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
+        StartCoroutine(FaderReset()); //TO DELETE
         attractor.ResetPlayer(currentTableauManager.GetAttractorSpawnPoint());
         repulsor.ResetPlayer(currentTableauManager.GetRepulsorSpawnPoint());
         currentTableauManager.ResetTableau();
@@ -63,6 +65,14 @@ public class GameManager : MonoBehaviour
 
         camera.transform.position = cameraEndPoint;
     }
+    
+    //this function will launch the fading process
+    private IEnumerator FaderReset()
+    {
+        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeIn();
+        yield return new WaitForSeconds(1f);
+        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeOut();
+    }
 
     public void Start()
     {
@@ -77,6 +87,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine(CameraTransition(tableauList[tableauIndex+1]));
             tableauIndex++;
             currentTableauManager = tableauList[tableauIndex];
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            StartCoroutine(FaderReset());
         }
     }
 }
