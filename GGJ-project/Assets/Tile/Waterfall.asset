@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f97f8f9513b0cc4398c60399b6aab46, type: 3}
+  m_Script: {fileID: 11500000, guid: aebda29dd3aa7bb43bb3394f8348ccdc, type: 3}
   m_Name: Waterfall
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
