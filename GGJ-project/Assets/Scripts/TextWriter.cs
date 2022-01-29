@@ -9,12 +9,14 @@ public class Dialogue
     public int id;
     public string sentence;
     public int character;
+    public int emotion;
 
-    public Dialogue(int id_, string sentence_, int character_)
+    public Dialogue(int id_, string sentence_, int character_, int emotion_)
     {
         this.id = id_;
         this.sentence = sentence_;
         this.character = character_;
+        this.emotion = emotion_;
     }
 }
 
@@ -22,7 +24,7 @@ public class TextWriter : MonoBehaviour
 {
 
     public Text txt;
-    public Image ptr;
+    public List<Image> ptr;
     public GameObject dialBox;
     public TextAsset ta;
     public int currentDialogueId;
@@ -32,8 +34,9 @@ public class TextWriter : MonoBehaviour
     private string sentence;
     public bool isWriting;
     [SerializeField] List<Dialogue> dial = new List<Dialogue>();
-    public List<Sprite> portrait;
-    
+    public List<Sprite> portrait_Axo;
+    public List<Sprite> portrait_Geck;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -75,9 +78,7 @@ public class TextWriter : MonoBehaviour
         StartCoroutine(WriteText(sentence, sentence.Length, charact));
         currentDialogueId++;
 
-        
-
-        ptr.sprite = portrait[charact];
+        ActivateCharacter(charact);
     }
 
     public IEnumerator WriteText(string sentence, int charNb, int charact)
@@ -95,6 +96,17 @@ public class TextWriter : MonoBehaviour
         yield break;
     }
 
+    public void ActivateCharacter(int id)
+    {
+        foreach(var x in ptr)
+        {
+            x.gameObject.SetActive(false);
+        }
+
+        ptr[id].gameObject.SetActive(true);
+        // ajouter l'émotion
+    }
+
     public Dialogue GetSentence(int id)
     {
         return dial.Find(dials => dials.id == id);
@@ -104,6 +116,7 @@ public class TextWriter : MonoBehaviour
     {
         string ss = "";
         int cc = 0;
+        int ee = 0;
         int id = 0;
 
         var l = ta.text.Split('\n');
@@ -119,7 +132,11 @@ public class TextWriter : MonoBehaviour
             int.TryParse(c[1], out ccc);
             cc = ccc;
 
-            dial.Add(new Dialogue(id, ss, cc));
+            int eee;
+            int.TryParse(c[2], out eee);
+            ee = eee;
+
+            dial.Add(new Dialogue(id, ss, cc, ee));
         } 
     }
 
