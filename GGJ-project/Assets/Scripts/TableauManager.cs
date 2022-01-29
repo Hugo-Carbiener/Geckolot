@@ -7,6 +7,9 @@ public class TableauManager : MonoBehaviour
     [SerializeField] private GameObject[] resetableObjects;
     [SerializeField] private GameObject attractorSpawnPoint;
     [SerializeField] private GameObject repulsorSpawnPoint;
+
+    public TextAsset textForThisTab;
+
     public void ResetTableau()
     {
         foreach (var r in resetableObjects)
