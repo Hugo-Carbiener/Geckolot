@@ -23,6 +23,7 @@ public class TextWriter : MonoBehaviour
 
     public Text txt;
     public Image ptr;
+    public GameObject dialBox;
     public TextAsset ta;
     public int currentDialogueId;
     public float speed;
@@ -59,6 +60,12 @@ public class TextWriter : MonoBehaviour
 
     public void AddText()
     {
+        if (currentDialogueId+1 > dial.Count)
+        {
+            dialBox.SetActive(false);
+            return;
+        }
+
         isWriting = true;
         index = 0;
         
@@ -67,6 +74,8 @@ public class TextWriter : MonoBehaviour
         charact = GetSentence(currentDialogueId).character;
         StartCoroutine(WriteText(sentence, sentence.Length, charact));
         currentDialogueId++;
+
+        
 
         ptr.sprite = portrait[charact];
     }
