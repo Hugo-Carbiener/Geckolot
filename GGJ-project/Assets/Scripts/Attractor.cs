@@ -9,6 +9,7 @@ public class Attractor : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float attractionIntensity;
     [SerializeField] private Transform ally;
+    [SerializeField] private float maxForce;
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
