@@ -15,12 +15,6 @@ public class Door : ButtonTriggerable
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void onButtonActivation()
     {
         collider.enabled = false;

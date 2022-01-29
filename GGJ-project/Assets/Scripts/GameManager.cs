@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public void ResetProcedure()
     {
         //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
-        StartCoroutine(FaderReset()); //TO DELETE
+        StartCoroutine(FaderReset()); 
         attractor.ResetPlayer(currentTableauManager.GetAttractorSpawnPoint());
         repulsor.ResetPlayer(currentTableauManager.GetRepulsorSpawnPoint());
         currentTableauManager.ResetTableau();
@@ -92,6 +92,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             StartCoroutine(FaderReset());
+        }
+
+        if(Input.GetKeyDown(KeyCode.R)){
+            ResetProcedure();
         }
     }
 }
