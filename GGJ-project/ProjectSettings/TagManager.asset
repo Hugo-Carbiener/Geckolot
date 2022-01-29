@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - Fader
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Attractor
   - Repulsor
   - Player
-  - 
-  - 
+  - RepulsorWall
+  - AttractorWall
   - 
   - 
   - 
