@@ -6,6 +6,8 @@ public class Button : MonoBehaviour
 {
     // The game object which receive Button message
     [SerializeField] ButtonTriggerable triggerable;
+    [SerializeField] GameObject on;
+    [SerializeField] GameObject off;
 
     // number of player on the Button
     private int onButton;
@@ -28,6 +30,8 @@ public class Button : MonoBehaviour
             onButton ++;
             if (onButton == 1)
             {
+                on.SetActive(true);
+                off.SetActive(false);
                 triggerable.onButtonActivation();
             }
         }
@@ -39,6 +43,8 @@ public class Button : MonoBehaviour
             onButton--;
             if ( onButton == 0) 
             {
+                off.SetActive(true);
+                on.SetActive(false);
                 triggerable.onButtonDeactivation();
             }
         }

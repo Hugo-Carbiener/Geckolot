@@ -11,33 +11,48 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded;
+    private Animator anim;
+    private SpriteRenderer renderer;
+    public bool is_tumbled;
 
     // Start is called before the first frame update
     void Start()
     {
+        is_tumbled=false;
         isGrounded=true;
+        anim=this.GetComponent<Animator>();
+        renderer=this.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    // FixedUpdate is called once per frame
     void Update()
     {
-        //----------------------------------
-        
-        //----------------------------------
+        anim.SetBool("is_running",false);
+        anim.SetBool("is_idle",true);
+        anim.SetBool("is_tumbling",false);
+        anim.SetBool("is_falling",false);
+        anim.SetBool("is_jumping",false);
         float horizontal_input=0f;
+        print(is_tumbled);
+       
         if(isAttractor)
         {
             if(Input.GetKey("d"))
             {
                 horizontal_input+=1;
+                renderer.flipX=false;
+                anim.SetBool("is_running",true);
             }
             if (Input.GetKey("q"))
             {
                 horizontal_input-=1;
+                renderer.flipX=true;
+                anim.SetBool("is_running",true);
             }
             if(Input.GetKeyDown("z") && isGrounded )
             {
                 Jump();
+                anim.SetBool("is_jumping",true);
             }
         }
         else
@@ -45,17 +60,23 @@ public class PlayerController : MonoBehaviour
             if(Input.GetKey(KeyCode.RightArrow))
             {
                 horizontal_input+=1;
+                anim.SetBool("is_running",true);
+                renderer.flipX=false;
             }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 horizontal_input-=1;
+                renderer.flipX=true;
+                anim.SetBool("is_running",true);
             }
             if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded )
             {
                 Jump();
+                anim.SetBool("is_jumping",true);
             }
         }
         rb.velocity=new Vector2(horizontal_input*speed,rb.velocity.y);
+        Animation();
     }
 
     //the function used to jump :
@@ -78,17 +99,39 @@ public class PlayerController : MonoBehaviour
     //the function that handles the reset of the player
     public void ResetPlayer(Vector2 position)
     {
-        //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
-        //StartCoroutine(FaderReset()); //TO DELETE
-        //----------------------------------------
         gameObject.transform.position=position;
     }
 
-    //this function will launch the fading process
-    private IEnumerator FaderReset()
+    //this function is the one that handles the animation
+    private void Animation()
     {
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeIn();
-        yield return new WaitForSeconds(1f);
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeOut();
+         if(is_tumbled){
+            anim.SetBool("is_tumbling",true);
+            anim.SetBool("is_running",false);
+            anim.SetBool("is_idle",false);
+            anim.SetBool("is_jumping",false);
+            anim.SetBool("is_falling",false);
+            anim.SetBool("isGrounded",false);
+            return;
+        }
+        anim.SetBool("isGrounded",isGrounded);
+        if(rb.velocity.y<0)
+        {
+            anim.SetBool("is_falling",true);
+            return;
+        }
+        if(isGrounded)
+        {
+            if(rb.velocity.x==0)
+            {
+                anim.SetBool("is_idle",true);
+                return;
+            }
+        }
+        if(rb.velocity.y>0)
+        {
+            anim.SetBool("is_jumping",true);
+            return;
+        }
     }
 }
