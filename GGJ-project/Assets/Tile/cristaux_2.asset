@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: cristaux_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2140922066637194138, guid: 6d92be53057289542b26461e273e63eb, type: 3}
+  m_Sprite: {fileID: -2140922066637194138, guid: 3d97481e20c058442a88e5d48516dbf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
