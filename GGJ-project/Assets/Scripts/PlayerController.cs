@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isGrounded;
     private Animator anim;
     private SpriteRenderer renderer;
+    public bool is_tumbled;
 
     // Start is called before the first frame update
     void Start()
     {
+        is_tumbled=false;
         isGrounded=true;
         anim=this.GetComponent<Animator>();
         renderer=this.GetComponent<SpriteRenderer>();
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("is_falling",false);
         anim.SetBool("is_jumping",false);
         float horizontal_input=0f;
+        print(is_tumbled);
+       
         if(isAttractor)
         {
             if(Input.GetKey("d"))
@@ -101,21 +105,33 @@ public class PlayerController : MonoBehaviour
     //this function is the one that handles the animation
     private void Animation()
     {
+         if(is_tumbled){
+            anim.SetBool("is_tumbling",true);
+            anim.SetBool("is_running",false);
+            anim.SetBool("is_idle",false);
+            anim.SetBool("is_jumping",false);
+            anim.SetBool("is_falling",false);
+            anim.SetBool("isGrounded",false);
+            return;
+        }
         anim.SetBool("isGrounded",isGrounded);
         if(rb.velocity.y<0)
         {
             anim.SetBool("is_falling",true);
+            return;
         }
         if(isGrounded)
         {
             if(rb.velocity.x==0)
             {
                 anim.SetBool("is_idle",true);
+                return;
             }
         }
         if(rb.velocity.y>0)
         {
             anim.SetBool("is_jumping",true);
+            return;
         }
     }
 }

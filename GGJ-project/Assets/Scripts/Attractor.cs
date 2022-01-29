@@ -12,12 +12,14 @@ public class Attractor : MonoBehaviour
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
+    private PlayerController allyPlayer;
 
     private void Awake()
     {
         player = transform;
         allyRb = ally.GetComponent<Rigidbody2D>();
         allyAnim = ally.GetComponent<Animator>();
+        allyPlayer=ally.GetComponent<PlayerController>();
     }
 
     private void FixedUpdate()
@@ -30,12 +32,9 @@ public class Attractor : MonoBehaviour
                 Vector2 dir = -(ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
-                allyAnim.SetBool("is_tumbling",true);
-                allyAnim.SetBool("is_running",false);
-                allyAnim.SetBool("is_idle",false);
-                allyAnim.SetBool("is_jumping",false);
-                allyAnim.SetBool("is_falling",false);
-                allyAnim.SetBool("isGrounded",false);
+                allyPlayer.is_tumbled=true;
+            } else {
+            allyPlayer.is_tumbled=false;
             }
         }
     }
