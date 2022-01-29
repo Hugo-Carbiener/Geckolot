@@ -18,8 +18,8 @@ TagManager:
   - Attractor
   - Repulsor
   - Player
-  - 
-  - 
+  - RepulsorWall
+  - AttractorWall
   - 
   - 
   - 
