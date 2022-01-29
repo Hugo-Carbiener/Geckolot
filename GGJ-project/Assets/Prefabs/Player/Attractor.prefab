@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 494723800165288404, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09cd9436a2a699e4ca2259078c6828a5, type: 2}
     - target: {fileID: 1152386463932251493, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
