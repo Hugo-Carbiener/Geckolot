@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interruptor : MonoBehaviour
+public class Button : MonoBehaviour
 {
-    // The game object which receive interruptor message
-    // [SerializeField] GameManager gm;
+    // The game object which receive Button message
+    [SerializeField] ButtonTriggerable triggerable;
 
-    // number of player on the Interruptor
-    private int onInterruptor;
+    // number of player on the Button
+    private int onButton;
     
     // Start is called before the first frame update
     void Start()
     {
-        onInterruptor = 0;  
+        onButton = 0;  
     }
 
     // Update is called once per frame
@@ -25,10 +25,10 @@ public class Interruptor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if ( col.tag == "Player") {
-            onInterruptor ++;
-            if (onInterruptor == 1)
+            onButton ++;
+            if (onButton == 1)
             {
-    //            gm.onInterruptorActivation();
+                triggerable.onButtonActivation();
             }
         }
     }
@@ -36,10 +36,10 @@ public class Interruptor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         if ( col.tag == "Player") {
-            onInterruptor--;
-            if ( onInterruptor == 0) 
+            onButton--;
+            if ( onButton == 0) 
             {
-     //           gm.onInterruptorActivation();
+                triggerable.onButtonDeactivation();
             }
         }
     }
