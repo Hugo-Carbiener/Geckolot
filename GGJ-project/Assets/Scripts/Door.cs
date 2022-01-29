@@ -5,13 +5,13 @@ using UnityEngine;
 public class Door : ButtonTriggerable
 {
     private Collider2D collider;
-    private SpriteRenderer sr;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         collider = GetComponent<Collider2D>();
-        sr = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -24,12 +24,12 @@ public class Door : ButtonTriggerable
     public override void onButtonActivation()
     {
         collider.enabled = false;
-        sr.enabled = false;
+        spriteRenderer.enabled = false;
     }
 
     public override void onButtonDeactivation()
     {
         collider.enabled = true;
-        sr.enabled = true;
+        spriteRenderer.enabled = true;
     }
 }
