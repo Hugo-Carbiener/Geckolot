@@ -6,6 +6,8 @@ public class Interruptor : MonoBehaviour
 {
 
     [SerializeField] private TableauManager tableau;
+    [SerializeField] private GameObject on;
+    [SerializeField] private GameObject off;
 
     // number of player on the Interruptor
     private int onInterruptor;
@@ -13,7 +15,6 @@ public class Interruptor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         onInterruptor = 0;  
     }
 
@@ -29,6 +30,8 @@ public class Interruptor : MonoBehaviour
             onInterruptor ++;
             if (onInterruptor == 1)
             {
+                on.SetActive(true);
+                off.SetActive(false);
                 tableau.interruptorOn();
             }
         }
@@ -40,6 +43,8 @@ public class Interruptor : MonoBehaviour
             onInterruptor--;
             if ( onInterruptor == 0) 
             {
+                off.SetActive(true);
+                on.SetActive(false);
                tableau.interruptorOff();
             }
         }
