@@ -78,17 +78,9 @@ public class PlayerController : MonoBehaviour
     //the function that handles the reset of the player
     public void ResetPlayer(Vector2 position)
     {
-        //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
-        StartCoroutine(FaderReset()); //TO DELETE
         //----------------------------------------
         gameObject.transform.position=position;
     }
 
-    //this function will launch the fading process
-    private IEnumerator FaderReset()
-    {
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeIn();
-        yield return new WaitForSeconds(1f);
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeOut();
-    }
+
 }
