@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 258700475868675216, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1152386463932251493, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
