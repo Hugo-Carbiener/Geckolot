@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded;
+    private PlayerSoundController playerSound;
     private Animator anim;
     private SpriteRenderer renderer;
     public bool is_tumbled;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         is_tumbled=false;
         isGrounded=true;
+        playerSound = this.GetComponent<PlayerSoundController>();
         anim=this.GetComponent<Animator>();
         renderer=this.GetComponent<SpriteRenderer>();
     }
@@ -83,6 +85,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isGrounded=false;
+        playerSound.PlayJump();
+
     }
 
     //the function that indicates if the player is grounded :
