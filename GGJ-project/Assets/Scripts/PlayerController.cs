@@ -32,9 +32,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("is_tumbling",false);
         anim.SetBool("is_falling",false);
         anim.SetBool("is_jumping",false);
-        float horizontal_input=0f;
-        print(is_tumbled);
-       
+        float horizontal_input=0f;       
         if(isAttractor)
         {
             if(Input.GetKey("d"))
