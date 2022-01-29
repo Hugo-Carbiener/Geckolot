@@ -11,11 +11,15 @@ public class Attractor : MonoBehaviour
     [SerializeField] private Transform ally;
     private Rigidbody2D allyRb;
     private Transform player;
+    private Animator allyAnim;
+    private PlayerController allyPlayer;
 
     private void Awake()
     {
         player = transform;
         allyRb = ally.GetComponent<Rigidbody2D>();
+        allyAnim = ally.GetComponent<Animator>();
+        allyPlayer=ally.GetComponent<PlayerController>();
     }
 
     private void FixedUpdate()
@@ -23,10 +27,14 @@ public class Attractor : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             float distance = Vector2.Distance(ally.position, player.position);
-            if (distance < range) {
+            if (distance < range && distance > 0.6) 
+            {
                 Vector2 dir = -(ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
+                allyPlayer.is_tumbled=true;
+            } else {
+            allyPlayer.is_tumbled=false;
             }
         }
     }
