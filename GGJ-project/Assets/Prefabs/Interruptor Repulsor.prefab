@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674924691249523467}
   - component: {fileID: 1852090868382515577}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: portes_boutons_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8001580429946942372}
   - component: {fileID: 3226707246795573187}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: portes_boutons_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,6 +171,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8439882488246050764, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 8439882488246050770, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
       propertyPath: m_Size.x
       value: 0.16
@@ -219,6 +223,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 8439882488946373313, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 8439882488946373319, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
       propertyPath: m_Size.x
       value: 0.16
@@ -238,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 8439882489782486150, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
       propertyPath: m_Name
       value: Interruptor Repulsor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439882489782486150, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8439882489782486150, guid: f80fca1716477c244ad85833d5967fcb, type: 3}
       propertyPath: m_TagString
