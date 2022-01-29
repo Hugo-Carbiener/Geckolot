@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 806483094494020302}
   m_Layer: 0
   m_Name: Fader
-  m_TagString: Untagged
+  m_TagString: Fader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
