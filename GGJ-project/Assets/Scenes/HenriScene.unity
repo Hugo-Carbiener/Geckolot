@@ -552,6 +552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5153883974395317609, guid: e5513476c7ed9f044becf287eeda1acc, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 10c4159e3c994734f832bbbd0872756c, type: 2}
     - target: {fileID: 5153883974395317610, guid: e5513476c7ed9f044becf287eeda1acc, type: 3}
       propertyPath: m_Name
       value: RepulsorWall
@@ -653,6 +657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7502084316570147530, guid: 250bcb1396e9bfc4ca8a708499b477d7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 10c4159e3c994734f832bbbd0872756c, type: 2}
     - target: {fileID: 7502084316570147575, guid: 250bcb1396e9bfc4ca8a708499b477d7, type: 3}
       propertyPath: m_Name
       value: AttractorWall
