@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4573694710723927107, guid: 62e2b2dffc263064d996cdbcfc242f07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 4573694710723927107, guid: 62e2b2dffc263064d996cdbcfc242f07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13061,18 +13061,18 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310927356}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Material: {fileID: 6200000, guid: eacf8ea7a3a25e0489043120000f859e, type: 2}
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!1 &1388458270
 GameObject:
@@ -13156,6 +13156,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 175708004182147119, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e52455f0b2811b2499f7abbbd41d0127, type: 3}
+    - target: {fileID: 175708004182147119, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4344501949759186933, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -13170,11 +13178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765817143661807785, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.65
+      value: -3.84
       objectReference: {fileID: 0}
     - target: {fileID: 7765817143661807785, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7765817143661807785, guid: 2872811c6f923a8458c6fd4123d68781, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13526,16 +13534,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 12
       m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13935,7 +13933,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 88e4ee243708da74cbc74acab41801c3, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -13982,12 +13980,12 @@ Tilemap:
     m_Data: {fileID: -6444268376462891254, guid: 8ae91a2e2cf7df543939d8988f63f797, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5751712539931909091, guid: 8ae91a2e2cf7df543939d8988f63f797, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 6815920150536670361, guid: 8ae91a2e2cf7df543939d8988f63f797, type: 3}
   - m_RefCount: 57
     m_Data: {fileID: 8875571430414647080, guid: 8ae91a2e2cf7df543939d8988f63f797, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 63
+  - m_RefCount: 62
     m_Data:
       e00: 1
       e01: 0
@@ -14006,7 +14004,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 63
+  - m_RefCount: 62
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
@@ -14070,7 +14068,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: eacf8ea7a3a25e0489043120000f859e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
