@@ -24,7 +24,7 @@ public class Repulsor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.RightControl))
+        if (Input.GetKey(KeyCode.RightShift))
         {
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6)
