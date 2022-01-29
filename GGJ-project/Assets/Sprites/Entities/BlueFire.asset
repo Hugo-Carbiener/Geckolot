@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebda29dd3aa7bb43bb3394f8348ccdc, type: 3}
+  m_Name: BlueFire
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 489988695643990808, guid: a5e18822f619d9246b2f739e06447c32, type: 3}
+  - {fileID: -8386189404600984551, guid: a5e18822f619d9246b2f739e06447c32, type: 3}
+  - {fileID: 5832170064075089860, guid: a5e18822f619d9246b2f739e06447c32, type: 3}
+  - {fileID: -8752471672838328940, guid: a5e18822f619d9246b2f739e06447c32, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
+  m_AnimationStartTime: 0
+  m_TileColliderType: 1

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebda29dd3aa7bb43bb3394f8348ccdc, type: 3}
+  m_Name: RedFire
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 3995527939015321565, guid: ffdebfd1a63c0ac41bfa4e4b5d8153f5, type: 3}
+  - {fileID: 5414297970862887367, guid: ffdebfd1a63c0ac41bfa4e4b5d8153f5, type: 3}
+  - {fileID: -8233075708955733824, guid: ffdebfd1a63c0ac41bfa4e4b5d8153f5, type: 3}
+  - {fileID: -8544596868495927592, guid: ffdebfd1a63c0ac41bfa4e4b5d8153f5, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
+  m_AnimationStartTime: 0
+  m_TileColliderType: 1
