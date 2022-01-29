@@ -101,13 +101,21 @@ public class PlayerController : MonoBehaviour
     //this function is the one that handles the animation
     private void Animation()
     {
+        anim.SetBool("isGrounded",isGrounded);
         if(rb.velocity.y<0)
         {
             anim.SetBool("is_falling",true);
         }
         if(isGrounded)
         {
-            anim.SetBool("isGrounded",true);
+            if(rb.velocity.x==0)
+            {
+                anim.SetBool("is_idle",true);
+            }
+        }
+        if(rb.velocity.y>0)
+        {
+            anim.SetBool("is_jumping",true);
         }
     }
 }

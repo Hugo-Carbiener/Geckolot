@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: ally
       value: 
       objectReference: {fileID: 520322590}
+    - target: {fileID: 5818887611247455672, guid: 62e2b2dffc263064d996cdbcfc242f07, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818887611247455672, guid: 62e2b2dffc263064d996cdbcfc242f07, type: 3}
+      propertyPath: attractionIntensity
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e2b2dffc263064d996cdbcfc242f07, type: 3}
 --- !u!4 &520322590 stripped
