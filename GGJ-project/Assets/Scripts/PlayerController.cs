@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     public void ResetPlayer(Vector2 position)
     {
         //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
-        // StartCoroutine(FaderReset()); //TO DELETE
+        //StartCoroutine(FaderReset()); //TO DELETE
         //----------------------------------------
         gameObject.transform.position=position;
     }
