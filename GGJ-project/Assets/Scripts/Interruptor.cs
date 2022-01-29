@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Interruptor : MonoBehaviour
 {
-
-    // the game manager who receive message
-    //  [SerializeField] GameManager gm;
+    // The game object which receive interruptor message
+    [SerializeField] GameManager gm;
 
     // number of player on the Interruptor
     private int onInterruptor;
@@ -29,8 +28,7 @@ public class Interruptor : MonoBehaviour
             onInterruptor ++;
             if (onInterruptor == 1)
             {
-                // TODO send a message to the game manager
-                Debug.Log("Player(s) on interruptor");
+                gm.onInterruptorActivation();
             }
         }
     }
@@ -39,11 +37,10 @@ public class Interruptor : MonoBehaviour
     {
         if ( col.tag == "Player") {
             onInterruptor--;
-            if ( onInterruptor == 0) {
-                // TODO send a message to the game manager
-                Debug.Log("No player on interruptor");
+            if ( onInterruptor == 0) 
+            {
+                gm.onInterruptorActivation();
             }
         }
-
     }
 }
