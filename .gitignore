@@ -549,3 +549,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio
+GGJ-project/ProjectSettings/EditorBuildSettings.asset
+
+GGJ-project/UserSettings/EditorUserSettings.asset
