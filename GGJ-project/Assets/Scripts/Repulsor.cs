@@ -6,6 +6,7 @@ public class Repulsor : MonoBehaviour
 {
     private bool isRepulsing;
     // ally is the other player
+    [SerializeField] private float range;
     [SerializeField] private float repulsionIntensity;
     [SerializeField] private Transform ally;
     private Rigidbody2D allyRb;
@@ -21,9 +22,13 @@ public class Repulsor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightControl))
         {
-            Vector2 dir = (ally.position - player.position) / Vector3.Distance(ally.position, player.position);
-            dir *= 1 / Vector2.Distance(ally.position, player.position);
-            allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
+            float distance = Vector2.Distance(ally.position, player.position);
+            if (distance < range)
+            {
+                Vector2 dir = (ally.position - player.position) / distance;
+                dir *= 1 / distance;
+                allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
+            }
         }
     }
 }

@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1396688550990464667, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: speed
       value: 10
@@ -297,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ca63d146d2066439cff1bc44557b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 10
   repulsionIntensity: 20
   ally: {fileID: 2118055305}
 --- !u!1001 &843004397
@@ -310,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fec317be5adb8ab4e92c0c71986c6916, type: 2}
+    - target: {fileID: 1396688550990464667, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3957040706176471739, guid: 4653080c4a2d45e478d6939c90496cee, type: 3}
       propertyPath: speed
       value: 10
@@ -497,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bafa9befe9a11e949b3d7a4c0708315e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 10
   attractionIntensity: 20
   ally: {fileID: 734068421}
 --- !u!4 &2118055305 stripped
