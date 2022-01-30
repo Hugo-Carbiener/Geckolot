@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] public GameObject settingsPanel;
     public TextWriter textWriter;
-
+    public GameManager gm;
     public void StartGame()
     {
 
@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         textWriter.ActivateDialogue();
+        gm.setPlayersControllable(false);
     }
 
     public void QuitGame()
