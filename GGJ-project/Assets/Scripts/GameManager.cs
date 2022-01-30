@@ -22,7 +22,12 @@ public class GameManager : MonoBehaviour
     public DateTime chronometer;
 
     [SerializeField] public TextWriter textWriter;
-    
+
+    public void Awake()
+    {
+        textWriter = FindObjectOfType<TextWriter>();
+    }
+
     public void ResetProcedure()
     {
         //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
