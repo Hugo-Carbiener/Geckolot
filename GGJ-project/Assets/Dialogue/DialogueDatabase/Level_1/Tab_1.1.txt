@@ -1,0 +1,18 @@
+WAAaaahhh…..... | 0 | 0
+WAAaaahhh, bonjour mon brave! Quel bon vent t’amène dans ma grotte? | 1| 0
+Euh….b-bonjour…..je zuis tombé(e)… | 0| 0
+C’est horrible, tu t’es fait mal? |1|0
+Mais alors ça veut dire que tu viens de l’extérieur ? |1| 0
+C’est trop bien, j’ai toujours rêvé d’y aller. |1| 1
+C’est comment là-bas? Il paraît qu’il y a de grandes plantes à perte de vue. |1|1
+Tu as déjà vu un crocodile ? Est-ce que les chauves-souris sont des oiseaux ? |1|1
+.......za va, j’ai pas trop mal | 0| 0
+Super!!!!!! | 1| 1
+Bof, j’aimerai bien rentrer chez moi… | 0| 0
+Pas de soucis, la sortie est juste par ici. |1| 2
+L’ennui c’est qu’il y a un gros mur et je n’ai jamais réussi à le franchir. | 1| 0
+Quel endroit étrange, tout est zombre et humide… Mais z’est magnifique, les cristaux brillent comme z’ils étaient vivants!|0|2
+On dit que l’énergie qui circule dans cette grotte peut révéler la personnalité des gens. Cela se manifeste de façon différente chez chacun. |1|2
+Par exemple pour moi, on m’a toujours dit que j’étais une personne particulièrement attractive ;) |1|2
+Perzonnellement, j’ai plutôt tendance à réquisitionner un peu trop d’ezpace vital: je n’ai pas l’habitude d’être entouré de trop de monde.|0|1
+Peut-être qu’en utilisant les propriétés étranges de cet endroit, nous arriverons à en sortir.|1|0
