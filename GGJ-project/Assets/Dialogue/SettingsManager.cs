@@ -20,7 +20,7 @@ public class SettingsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        musicManager.GetComponent<AudioSource>().volume = musicSL.value;
-        sfxManager.GetComponent<AudioSource>().volume = effectSL.value;
+        //musicManager.GetComponent<AudioSource>().volume = musicSL.value;
+        //sfxManager.GetComponent<AudioSource>().volume = effectSL.value;
     }
 }

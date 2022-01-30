@@ -8,11 +8,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] public GameObject settingsPanel;
     public TextWriter textWriter;
 
-    public void StartGame()
-    {
-
-    }
-
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
@@ -27,6 +22,11 @@ public class MainMenu : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         textWriter.ActivateDialogue();
+    }
+
+    public void OpenCredits()
+    {
+        // open credit scene
     }
 
     public void QuitGame()
