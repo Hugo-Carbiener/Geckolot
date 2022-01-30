@@ -22,5 +22,6 @@ public class SettingsManager : MonoBehaviour
     {
         // musicManager.GetComponent<AudioSource>().volume = musicSL.value;
         // sfxManager.GetComponent<AudioSource>().volume = effectSL.value;
+
     }
 }
