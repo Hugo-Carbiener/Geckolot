@@ -9,6 +9,8 @@ public class Repulsor : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float repulsionIntensity;
     [SerializeField] private Transform ally;
+    [SerializeField] private bool isPowerUsable = true;
+
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
@@ -21,10 +23,16 @@ public class Repulsor : MonoBehaviour
         allyAnim = ally.GetComponent<Animator>();
         allyPlayer=ally.GetComponent<PlayerController>();
     }
+    
+    public void setPowerUsable(bool val)
+    {
+        this.isPowerUsable = val;
+    }
+
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.RightShift) && isPowerUsable)
         {
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6)

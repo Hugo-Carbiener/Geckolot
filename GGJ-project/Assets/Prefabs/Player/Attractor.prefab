@@ -136,6 +136,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 40
   isGrounded: 1
+  isControllable: 1
   is_tumbled: 0
 --- !u!50 &6083976521274656314
 Rigidbody2D:
@@ -260,3 +261,4 @@ MonoBehaviour:
   attractionIntensity: 50
   ally: {fileID: 0}
   maxForce: 0
+  isPowerUsable: 1
