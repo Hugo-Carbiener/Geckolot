@@ -36,6 +36,7 @@ public class TextWriter : MonoBehaviour
     private int charact;
     private int emotion;
     private string sentence;
+    private DialogueSoundManager sound;
     public bool isWriting;
     [SerializeField] List<Dialogue> dial = new List<Dialogue>();
     public List<Sprite> portrait_Axo;
@@ -44,6 +45,7 @@ public class TextWriter : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        sound = GetComponent<DialogueSoundManager>();
         //ActivateDialogue();
     }
 
@@ -96,6 +98,10 @@ public class TextWriter : MonoBehaviour
             if (invisibleChar)
             {
                 text += "<color=#00000000>" + sentence.Substring(index) + "</color>";
+            }
+            if(sentence[index]  != ' ')
+            {
+                sound.PlaySound();
             }
             txt.text = text;
             index++;
