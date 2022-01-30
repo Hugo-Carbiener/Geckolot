@@ -11,6 +11,7 @@ public class Attractor : MonoBehaviour
     [SerializeField] private Transform ally;
     [SerializeField] private float maxForce;
     [SerializeField] private bool isPowerUsable = true;
+    [SerializeField] private GameObject attractorPower;
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
@@ -36,12 +37,14 @@ public class Attractor : MonoBehaviour
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6) 
             {
+                attractorPower.SetActive(true);
                 Vector2 dir = -(ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
                 allyPlayer.is_tumbled=true;
             } else {
-            allyPlayer.is_tumbled=false;
+                allyPlayer.is_tumbled=false;
+                attractorPower.SetActive(false);
             }
         }
     }
