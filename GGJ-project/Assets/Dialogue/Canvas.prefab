@@ -124,7 +124,7 @@ MonoBehaviour:
   dialBox: {fileID: 813329617452259672}
   ta: {fileID: 4900000, guid: d8d167ed3c1d3534eacc04cd307842ed, type: 3}
   currentDialogueId: 0
-  speed: 0.02
+  speed: 0.06
   isWriting: 0
   dial: []
   portrait_Axo:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blabla: {fileID: 7699698384854898255}
-  masterMixer: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: 0a3d94aca570f4e4983cb812ee14452a, type: 2}
 --- !u!82 &7699698384854898255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 578409038991756790, guid: 0a3d94aca570f4e4983cb812ee14452a, type: 2}
   m_audioClip: {fileID: 8300000, guid: b9071c9ff5a8073428ffa0ccb9dc291e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2004,7 +2004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 813329616347393872}
-  dialogue: {fileID: 0}
+  textWriter: {fileID: 813329616090875657}
+  gm: {fileID: 0}
 --- !u!1 &813329618108659684
 GameObject:
   m_ObjectHideFlags: 0
