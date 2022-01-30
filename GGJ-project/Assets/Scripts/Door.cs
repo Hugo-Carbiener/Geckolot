@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Door : ButtonTriggerable
 {
-    private Collider2D collider;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private BoxCollider2D collider;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
+        collider = gameObject.GetComponent<BoxCollider2D>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     public override void onButtonActivation()
     {
+        print("mf trhqzyhdyqzjdvbuqzjbdqzubdqzuyhdqzvbuqzgdvqzdghqzd");
+        gameObject.SetActive(false);
         collider.enabled = false;
         spriteRenderer.enabled = false;
     }
 
     public override void onButtonDeactivation()
     {
+        gameObject.SetActive(true);
         collider.enabled = true;
         spriteRenderer.enabled = true;
     }
