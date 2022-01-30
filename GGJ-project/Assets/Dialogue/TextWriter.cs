@@ -99,10 +99,8 @@ public class TextWriter : MonoBehaviour
             {
                 text += "<color=#00000000>" + sentence.Substring(index) + "</color>";
             }
-            if(sentence[index]  != ' ')
-            {
-                sound.PlaySound();
-            }
+            
+            sound.PlaySound();
             txt.text = text;
             index++;
         }
