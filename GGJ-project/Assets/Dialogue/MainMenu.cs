@@ -13,11 +13,17 @@ public class MainMenu : MonoBehaviour
 
     public void Awake()
     {
-        gm = FindObjectOfType<GameManager>();
-        if (gm == null)
+        //gm = FindObjectOfType<GameManager>();
+        //if (gm == null)
+        //{
+        //    Debug.LogError("Game Manager not found");
+        //}
+        if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            Debug.LogError("Game Manager not found");
+            Debug.Log("Close main mnu");
+            closeMainMenu();
         }
+
     }
 
     public void OpenSettings()
