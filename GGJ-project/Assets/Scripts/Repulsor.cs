@@ -10,6 +10,7 @@ public class Repulsor : MonoBehaviour
     [SerializeField] private float repulsionIntensity;
     [SerializeField] private Transform ally;
     [SerializeField] private bool isPowerUsable = true;
+    [SerializeField] private GameObject repulsorPower;
 
     private Rigidbody2D allyRb;
     private Transform player;
@@ -37,6 +38,7 @@ public class Repulsor : MonoBehaviour
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6)
             {
+                repulsorPower.SetActive(true);
                 Vector2 dir = (ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
@@ -44,6 +46,7 @@ public class Repulsor : MonoBehaviour
             }
         } else {
             allyPlayer.is_tumbled=false;
+            repulsorPower.SetActive(false);
         }
     }
 }
