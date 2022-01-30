@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 
 public class SettingsManager : MonoBehaviour
 {
+
     public Slider musicSL;
     public Slider effectSL;
     public GameObject sfxManager;

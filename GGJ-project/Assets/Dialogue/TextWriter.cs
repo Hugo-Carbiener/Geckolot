@@ -72,6 +72,7 @@ public class TextWriter : MonoBehaviour
         {
             dialBox.SetActive(false);
             EnablePlayerMouvment();
+            gm.setPlayersControllable(true);
             return;
         }
 
@@ -142,11 +143,24 @@ public class TextWriter : MonoBehaviour
 
     public void ActivateDialogue()
     {
+        if (gm.currentTableauManager.text_for_the_tab == null)
+        {
+            gm.setPlayersControllable(true);
+            return;
+        }
         ta = gm.currentTableauManager.text_for_the_tab;
         AnalyseTextAsset(ta);
-        dialBox.SetActive(true);
-        currentDialogueId = 0;
-        AddText();
+        if (dial.Count != 0)
+        {
+            dialBox.SetActive(true);
+            currentDialogueId = 0;
+            AddText();
+        }
+        else
+        {
+            //Si on n'a pas de dialogue, on rend le contrôle aux joueurs
+            gm.setPlayersControllable(true);
+        }
     }
 
     public Dialogue GetSentence(int id)
@@ -156,6 +170,8 @@ public class TextWriter : MonoBehaviour
 
     public void AnalyseTextAsset(TextAsset ta)
     {
+        currentDialogueId = 0;
+        dial = new List<Dialogue>();
         string ss = "";
         int cc = 0;
         int ee = 0;
@@ -167,18 +183,21 @@ public class TextWriter : MonoBehaviour
         {
             id = i;
             var c = l[i].Split(char.Parse("|"));
+            if (c.Length >= 2)
+            {
+                ss = c[0];
 
-            ss = c[0];
+                int ccc;
+                int.TryParse(c[1], out ccc);
+                cc = ccc;
 
-            int ccc;
-            int.TryParse(c[1], out ccc);
-            cc = ccc;
+                int eee;
+                int.TryParse(c[2], out eee);
+                ee = eee;
 
-            int eee;
-            int.TryParse(c[2], out eee);
-            ee = eee;
-
-            dial.Add(new Dialogue(id, ss, cc, ee, true));
+                dial.Add(new Dialogue(id, ss, cc, ee, true));
+            }
+            
         } 
     }
 

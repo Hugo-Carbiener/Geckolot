@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,18 @@ public class MainMenu : MonoBehaviour
 {
 
     [SerializeField] public GameObject settingsPanel;
-    public TextWriter dialogue;
+    public TextWriter textWriter;
+    public GameManager gm;
+
+    public void Awake()
+    {
+        gm = FindObjectOfType<GameManager>();
+        if (gm == null)
+        {
+            Debug.LogError("Game Manager not found");
+        }
+    }
+
     public void StartGame()
     {
 
@@ -25,8 +37,8 @@ public class MainMenu : MonoBehaviour
     public void closeMainMenu()
     {
         this.gameObject.SetActive(false);
-        dialogue.ActivateDialogue();
-
+        textWriter.ActivateDialogue();
+        gm.setPlayersControllable(false);
     }
 
     public void QuitGame()

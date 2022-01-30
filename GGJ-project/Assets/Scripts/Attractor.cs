@@ -10,6 +10,8 @@ public class Attractor : MonoBehaviour
     [SerializeField] private float attractionIntensity;
     [SerializeField] private Transform ally;
     [SerializeField] private float maxForce;
+    [SerializeField] private bool isPowerUsable = true;
+    [SerializeField] private GameObject attractorPower;
     private PlayerSoundManager playerSound;
     private Rigidbody2D allyRb;
     private Transform player;
@@ -25,13 +27,19 @@ public class Attractor : MonoBehaviour
         allyPlayer=ally.GetComponent<PlayerController>();
     }
 
+    public void setPowerUsable(bool val)
+    {
+        this.isPowerUsable = val;
+    }
+    
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isPowerUsable)
         {
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6) 
             {
+                attractorPower.SetActive(true);
                 Vector2 dir = -(ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
@@ -42,7 +50,8 @@ public class Attractor : MonoBehaviour
                 }
                 allyPlayer.is_tumbled=true;
             } else {
-            allyPlayer.is_tumbled=false;
+                allyPlayer.is_tumbled=false;
+                attractorPower.SetActive(false);
             }
         }
     }

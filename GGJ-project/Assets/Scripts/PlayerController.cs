@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isControllable = true;
+
     public PlayerSoundManager audioManager;
     private Animator anim;
     private SpriteRenderer renderer;
@@ -26,56 +29,67 @@ public class PlayerController : MonoBehaviour
         audioManager = GetComponent<PlayerSoundManager>();
     }
 
+
     // FixedUpdate is called once per frame
     void Update()
     {
-        anim.SetBool("is_running",false);
-        anim.SetBool("is_idle",true);
-        anim.SetBool("is_tumbling",false);
-        anim.SetBool("is_falling",false);
-        anim.SetBool("is_jumping",false);
-        float horizontal_input=0f;       
-        if(isAttractor)
+        if (!isControllable)
         {
-            if(Input.GetKey("d"))
+            return;
+        }
+        anim.SetBool("is_running", false);
+        anim.SetBool("is_idle", true);
+        anim.SetBool("is_tumbling", false);
+        anim.SetBool("is_falling", false);
+        anim.SetBool("is_jumping", false);
+        float horizontal_input = 0f;
+        
+        if (isAttractor)
+        {
+            if (Input.GetKey("d"))
             {
-                horizontal_input+=1;
-                renderer.flipX=false;
-                anim.SetBool("is_running",true);
+                horizontal_input += 1;
+                renderer.flipX = false;
+                anim.SetBool("is_running", true);
             }
+
             if (Input.GetKey("q"))
             {
-                horizontal_input-=1;
-                renderer.flipX=true;
-                anim.SetBool("is_running",true);
+                horizontal_input -= 1;
+                renderer.flipX = true;
+                anim.SetBool("is_running", true);
             }
-            if(Input.GetKeyDown("z") && isGrounded )
+
+            if (Input.GetKeyDown("z") && isGrounded)
             {
                 Jump();
-                anim.SetBool("is_jumping",true);
+                anim.SetBool("is_jumping", true);
             }
         }
         else
         {
-            if(Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
-                horizontal_input+=1;
-                anim.SetBool("is_running",true);
-                renderer.flipX=false;
+                horizontal_input += 1;
+                anim.SetBool("is_running", true);
+                renderer.flipX = false;
             }
+
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                horizontal_input-=1;
-                renderer.flipX=true;
-                anim.SetBool("is_running",true);
+                horizontal_input -= 1;
+                renderer.flipX = true;
+                anim.SetBool("is_running", true);
             }
-            if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded )
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
             {
                 Jump();
-                anim.SetBool("is_jumping",true);
+                anim.SetBool("is_jumping", true);
             }
         }
-        rb.velocity=new Vector2(horizontal_input*speed,rb.velocity.y);
+
+        rb.velocity = new Vector2(horizontal_input * speed, rb.velocity.y);
         Animation();
     }
 
@@ -91,48 +105,85 @@ public class PlayerController : MonoBehaviour
     //the function that indicates if the player is grounded :
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag=="ground")
+        if (collision.gameObject.tag == "ground")
         {
-            isGrounded=true;
+            isGrounded = true;
         }
     }
 
     //the function that handles the reset of the player
     public void ResetPlayer(Vector2 position)
     {
-        gameObject.transform.position=position;
+        gameObject.transform.position = position;
     }
 
     //this function is the one that handles the animation
     private void Animation()
     {
-         if(is_tumbled){
-            anim.SetBool("is_tumbling",true);
-            anim.SetBool("is_running",false);
-            anim.SetBool("is_idle",false);
-            anim.SetBool("is_jumping",false);
-            anim.SetBool("is_falling",false);
-            anim.SetBool("isGrounded",false);
+        if (is_tumbled)
+        {
+            anim.SetBool("is_tumbling", true);
+            anim.SetBool("is_running", false);
+            anim.SetBool("is_idle", false);
+            anim.SetBool("is_jumping", false);
+            anim.SetBool("is_falling", false);
+            anim.SetBool("isGrounded", false);
             return;
         }
-        anim.SetBool("isGrounded",isGrounded);
-        if(rb.velocity.y<0)
+
+        anim.SetBool("isGrounded", isGrounded);
+        if (rb.velocity.y < 0)
         {
-            anim.SetBool("is_falling",true);
+            anim.SetBool("is_falling", true);
             return;
         }
-        if(isGrounded)
+
+        if (isGrounded)
         {
-            if(rb.velocity.x==0)
+            if (rb.velocity.x == 0)
             {
-                anim.SetBool("is_idle",true);
+                anim.SetBool("is_idle", true);
                 return;
             }
         }
-        if(rb.velocity.y>0)
+
+        if (rb.velocity.y > 0)
         {
-            anim.SetBool("is_jumping",true);
+            anim.SetBool("is_jumping", true);
             return;
+        }
+    }
+
+    public void SetControllable(bool val)
+    {
+        isControllable = val;
+    }
+    
+    public void startAnimation(String animationToStart)
+    {
+        anim.SetBool("is_falling", false);
+        anim.SetBool("isGrounded", false);
+        anim.SetBool("is_jumping", false);
+        anim.SetBool("is_tumbling", false);
+        anim.SetBool("is_running", false);
+        anim.SetBool("is_idle", false);
+
+        switch (animationToStart)
+        {
+            case "is_running":
+                anim.SetBool("is_running", true);
+                anim.SetBool("isGrounded", true);
+                break;
+            case "is_falling":
+            case "isGrounded":
+            case "is_jumping":
+            case "is_tumbling":
+            case "is_idle":
+                anim.SetBool(animationToStart, true);
+                break;
+            default:
+                Debug.LogWarning("Animation "+animationToStart+" not found");
+                break;
         }
     }
 }

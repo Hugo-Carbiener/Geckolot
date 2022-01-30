@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     // The game object which receive Button message
-    [SerializeField] ButtonTriggerable triggerable;
+    [SerializeField] GameObject triggerable;
     [SerializeField] GameObject on;
     [SerializeField] GameObject off;
     private AudioSource sound;
@@ -20,12 +20,6 @@ public class Button : MonoBehaviour
         onButton = 0;  
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if ( col.tag == "Player") {
@@ -34,8 +28,7 @@ public class Button : MonoBehaviour
             {
                 on.SetActive(true);
                 off.SetActive(false);
-                sound.Play();
-                triggerable.onButtonActivation();
+                triggerable.GetComponent<Door>().onButtonActivation();
             }
         }
     }
@@ -48,7 +41,7 @@ public class Button : MonoBehaviour
             {
                 off.SetActive(true);
                 on.SetActive(false);
-                triggerable.onButtonDeactivation();
+                triggerable.GetComponent<Door>().onButtonDeactivation();
             }
         }
     }
