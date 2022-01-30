@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
@@ -40,9 +41,9 @@ public class GameManager : MonoBehaviour
 
     public void NextTableau()
     {
-        if (tableauIndex == tableauList.Length)
+        if (tableauIndex == tableauList.Length-1)
         {
-            Debug.Log("Last tableau, next level !");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             return;
         }
         else
@@ -50,7 +51,6 @@ public class GameManager : MonoBehaviour
             TableauManager nextTableauManager = tableauList[tableauIndex + 1];
             nextTableauManager.enabled = true;
             StartCoroutine(ITableauTransition(nextTableauManager));
-            Debug.Log("Après la coroutine");
             currentTableauManager.enabled = false;
             currentTableauManager = nextTableauManager;
             tableauIndex++;
@@ -141,9 +141,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            StartCoroutine(ITableauTransition(tableauList[tableauIndex+1]));
-            tableauIndex++;
-            currentTableauManager = tableauList[tableauIndex];
+            // StartCoroutine(ITableauTransition(tableauList[tableauIndex+1]));
+            // tableauIndex++;
+            // currentTableauManager = tableauList[tableauIndex];
+            NextTableau();
         }
 
         if (Input.GetKeyDown(KeyCode.O))

@@ -24,7 +24,6 @@ public class SettingsManager : MonoBehaviour
     {
         masterMixer.SetFloat("MusicVol", 10*Mathf.Log10(musicSL.value));
         masterMixer.SetFloat("SFXVol", 10*Mathf.Log10(effectSL.value));
-        //musicManager.GetComponent<AudioSource>().volume = musicSL.value;
-        //sfxManager.GetComponent<AudioSource>().volume = effectSL.value;
+
     }
 }

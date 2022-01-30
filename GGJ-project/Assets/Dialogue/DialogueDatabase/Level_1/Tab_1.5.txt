@@ -1,0 +1,2 @@
+Cette plateforme contient un mécanisme.|0|2
+On devrait pouvoir l’utiliser pour sortir !|1|0

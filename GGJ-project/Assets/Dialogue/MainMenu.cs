@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -19,11 +20,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void StartGame()
-    {
-
-    }
-
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
@@ -39,6 +35,12 @@ public class MainMenu : MonoBehaviour
         this.gameObject.SetActive(false);
         textWriter.ActivateDialogue();
         gm.setPlayersControllable(false);
+    }
+
+    public void OpenCredits()
+    {
+        // open credit scene
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()
