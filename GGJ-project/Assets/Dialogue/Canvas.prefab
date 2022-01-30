@@ -343,7 +343,7 @@ MonoBehaviour:
   effectSL: {fileID: 813329617254452518}
   sfxManager: {fileID: 0}
   musicManager: {fileID: 0}
-  masterMixer: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: 0a3d94aca570f4e4983cb812ee14452a, type: 2}
 --- !u!1 &813329616387547220
 GameObject:
   m_ObjectHideFlags: 0

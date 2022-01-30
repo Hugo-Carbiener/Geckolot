@@ -13,12 +13,6 @@ public class SettingsManager : MonoBehaviour
     public GameObject musicManager;
     public AudioMixer masterMixer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
