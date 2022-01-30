@@ -16,7 +16,6 @@ public class Door : ButtonTriggerable
 
     public override void onButtonActivation()
     {
-        print("mf trhqzyhdyqzjdvbuqzjbdqzubdqzuyhdqzvbuqzgdvqzdghqzd");
         gameObject.SetActive(false);
         collider.enabled = false;
         spriteRenderer.enabled = false;
