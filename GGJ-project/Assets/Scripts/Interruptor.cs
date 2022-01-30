@@ -8,6 +8,7 @@ public class Interruptor : MonoBehaviour
     [SerializeField] private TableauManager tableau;
     [SerializeField] private GameObject on;
     [SerializeField] private GameObject off;
+    [SerializeField] private GameObject door;
 
     // number of player on the Interruptor
     private int onInterruptor;
@@ -27,6 +28,7 @@ public class Interruptor : MonoBehaviour
                 on.SetActive(true);
                 off.SetActive(false);
                 tableau.interruptorOn();
+                door.GetComponent<InterruptorDoorController>().OnInterruptorTriggered();
             }
         }
     }
@@ -39,7 +41,8 @@ public class Interruptor : MonoBehaviour
             {
                 off.SetActive(true);
                 on.SetActive(false);
-               tableau.interruptorOff();
+                tableau.interruptorOff();
+                door.GetComponent<InterruptorDoorController>().OnInterruptorUnTriggered();
             }
         }
     }

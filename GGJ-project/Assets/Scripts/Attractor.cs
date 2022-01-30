@@ -10,6 +10,7 @@ public class Attractor : MonoBehaviour
     [SerializeField] private float attractionIntensity;
     [SerializeField] private Transform ally;
     [SerializeField] private float maxForce;
+    [SerializeField] private bool isPowerUsable = true;
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
@@ -23,9 +24,14 @@ public class Attractor : MonoBehaviour
         allyPlayer=ally.GetComponent<PlayerController>();
     }
 
+    public void setPowerUsable(bool val)
+    {
+        this.isPowerUsable = val;
+    }
+    
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isPowerUsable)
         {
             float distance = Vector2.Distance(ally.position, player.position);
             if (distance < range && distance > 0.6) 
