@@ -171,7 +171,6 @@ public class TextWriter : MonoBehaviour
                 ss = c[0];
 
                 int ccc;
-                Debug.Log(c[1]);
                 int.TryParse(c[1], out ccc);
                 cc = ccc;
 
