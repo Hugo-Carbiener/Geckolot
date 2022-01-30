@@ -113,6 +113,10 @@ public class GameManager : MonoBehaviour
         tableauIndex = 0;
     }
 
+    /*
+     * Fonction qui n'a aucune utilité autre que de tester rapidement des fonctions à l'aide de raccourcis.
+     * Tout peut yeet à tout moment !
+     */
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
