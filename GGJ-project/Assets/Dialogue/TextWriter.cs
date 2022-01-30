@@ -31,7 +31,7 @@ public class TextWriter : MonoBehaviour
     public TextAsset ta;
     public int currentDialogueId;
     public float speed;
-    private GameManager gm;
+    [SerializeField] private GameManager gm;
     private int index;
     private int charact;
     private int emotion;
@@ -42,9 +42,8 @@ public class TextWriter : MonoBehaviour
     public List<Sprite> portrait_Axo;
     public List<Sprite> portrait_Geck;
 
-    void Start()
+    void Awake()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         sound = GetComponent<DialogueSoundManager>();
         //ActivateDialogue();
     }
@@ -143,6 +142,10 @@ public class TextWriter : MonoBehaviour
 
     public void ActivateDialogue()
     {
+        Debug.Log(gm);
+        Debug.Log(gm.currentTableauManager);
+        Debug.Log(gm.currentTableauManager.text_for_the_tab);
+        Debug.Log(gm.currentTableauManager.text_for_the_tab.name);
         if (gm.currentTableauManager.text_for_the_tab == null)
         {
             gm.setPlayersControllable(true);
