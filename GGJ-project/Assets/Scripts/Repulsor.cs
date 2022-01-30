@@ -9,6 +9,7 @@ public class Repulsor : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float repulsionIntensity;
     [SerializeField] private Transform ally;
+    private PlayerSoundManager playerSound;
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
@@ -17,6 +18,7 @@ public class Repulsor : MonoBehaviour
     private void Awake()
     {
         player = transform;
+        playerSound = GetComponent<PlayerSoundManager>();
         allyRb = ally.GetComponent<Rigidbody2D>();
         allyAnim = ally.GetComponent<Animator>();
         allyPlayer=ally.GetComponent<PlayerController>();
@@ -32,6 +34,11 @@ public class Repulsor : MonoBehaviour
                 Vector2 dir = (ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
+                if (allyPlayer.is_tumbled == false)
+                {
+                    playerSound.PlayPowerSound();
+                    allyPlayer.audioManager.PlayThumbleSound();
+                }
                 allyPlayer.is_tumbled=true;
             }
         } else {

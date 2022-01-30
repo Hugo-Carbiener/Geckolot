@@ -14,6 +14,48 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-5212756004424288887
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 43640fe847d1f83469210e7a6024860e
+  m_EffectName: SFX Reverb
+  m_MixLevel: a67b256ce8a5af94ab4b5f0f55adc2cd
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: 962d309f70bc62048bd567a84e218672
+  - m_ParameterName: Room
+    m_GUID: ac6c11366796f944bb1f4b013173e6b0
+  - m_ParameterName: Room HF
+    m_GUID: 851e3af050c26c84a8c53b52f86c3444
+  - m_ParameterName: Decay Time
+    m_GUID: a1b7f51963443bf42b59b0f5bb6ae7fc
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: 4fd7b8521f4e5ee4299ae0852af38a90
+  - m_ParameterName: Reflections
+    m_GUID: 4b1eaa9a7892e3d4eb11c0abcc2e1185
+  - m_ParameterName: Reflect Delay
+    m_GUID: 32cd05f9e0ee05144872bf7f7100eedf
+  - m_ParameterName: Reverb
+    m_GUID: e84044dafe538e842ad14d0e507f40a7
+  - m_ParameterName: Reverb Delay
+    m_GUID: 9e845bff8a0bd6042a83ec6e11746038
+  - m_ParameterName: Diffusion
+    m_GUID: b3b796242a5786547a90538c28dba01d
+  - m_ParameterName: Density
+    m_GUID: deb14fd3a1e61dc47b932271992db91f
+  - m_ParameterName: HF Reference
+    m_GUID: 2aa31ba546913e940ba73d0b3b52ed23
+  - m_ParameterName: Room LF
+    m_GUID: cb9f95e6ac2228746a3f9cbe8d9a0085
+  - m_ParameterName: LF Reference
+    m_GUID: 8a4a54afc9267144f82f5505b35d9b67
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-3993859561125520603
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -28,6 +70,7 @@ AudioMixerGroupController:
   m_Pitch: df4be32bff3856f4ea65ec2f610b2e71
   m_Send: 00000000000000000000000000000000
   m_Effects:
+  - {fileID: -5212756004424288887}
   - {fileID: -8102816632714719071}
   m_UserColorIndex: 0
   m_Mute: 0
@@ -44,6 +87,7 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 2288824926379068286}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -109,8 +153,19 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 6867dea64f7fd3b4f9f2b6f5e215c3fa
   m_FloatValues:
+    851e3af050c26c84a8c53b52f86c3444: 0
+    4fd7b8521f4e5ee4299ae0852af38a90: 0.969
     104ffc44eae7b0e478a6b825761f4e4f: 0
+    2aa31ba546913e940ba73d0b3b52ed23: 13139
+    ac6c11366796f944bb1f4b013173e6b0: -2861
+    a1b7f51963443bf42b59b0f5bb6ae7fc: 9.72
+    32cd05f9e0ee05144872bf7f7100eedf: 0.3
+    4b1eaa9a7892e3d4eb11c0abcc2e1185: 1000
+    e84044dafe538e842ad14d0e507f40a7: 2000
     6118436c98168bc4c849f0d257ef4eb4: 1.04
+    962d309f70bc62048bd567a84e218672: 0
+    8a4a54afc9267144f82f5505b35d9b67: 901
+    9e845bff8a0bd6042a83ec6e11746038: 0.0872
   m_TransitionOverrides: {}
 --- !u!243 &578409038991756790
 AudioMixerGroupController:
@@ -159,6 +214,30 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!245 &2288824926379068286
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CaveReverb
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 95a9102f61697a342a9feba55db5d09f
+  m_FloatValues:
+    851e3af050c26c84a8c53b52f86c3444: 0
+    4fd7b8521f4e5ee4299ae0852af38a90: 0.969
+    104ffc44eae7b0e478a6b825761f4e4f: 0
+    2aa31ba546913e940ba73d0b3b52ed23: 13139
+    ac6c11366796f944bb1f4b013173e6b0: -2861
+    a1b7f51963443bf42b59b0f5bb6ae7fc: 9.72
+    32cd05f9e0ee05144872bf7f7100eedf: 0.3
+    4b1eaa9a7892e3d4eb11c0abcc2e1185: 1000
+    e84044dafe538e842ad14d0e507f40a7: 2000
+    6118436c98168bc4c849f0d257ef4eb4: 1.04
+    962d309f70bc62048bd567a84e218672: 0
+    8a4a54afc9267144f82f5505b35d9b67: 901
+    9e845bff8a0bd6042a83ec6e11746038: 0.0872
+  m_TransitionOverrides: {}
 --- !u!243 &7340310119596044211
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

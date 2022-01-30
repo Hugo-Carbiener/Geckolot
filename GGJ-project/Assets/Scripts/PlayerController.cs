@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded;
-    private PlayerSoundManager audioManager;
+    public PlayerSoundManager audioManager;
     private Animator anim;
     private SpriteRenderer renderer;
     public bool is_tumbled;

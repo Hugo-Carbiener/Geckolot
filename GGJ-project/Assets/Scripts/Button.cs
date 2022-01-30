@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
     [SerializeField] ButtonTriggerable triggerable;
     [SerializeField] GameObject on;
     [SerializeField] GameObject off;
+    private AudioSource sound;
 
     // number of player on the Button
     private int onButton;
@@ -15,6 +16,7 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         onButton = 0;  
     }
 
@@ -32,6 +34,7 @@ public class Button : MonoBehaviour
             {
                 on.SetActive(true);
                 off.SetActive(false);
+                sound.Play();
                 triggerable.onButtonActivation();
             }
         }

@@ -8,6 +8,7 @@ public class Interruptor : MonoBehaviour
     [SerializeField] private TableauManager tableau;
     [SerializeField] private GameObject on;
     [SerializeField] private GameObject off;
+    private AudioSource sound;
 
     // number of player on the Interruptor
     private int onInterruptor;
@@ -15,6 +16,7 @@ public class Interruptor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         onInterruptor = 0;  
     }
 
@@ -27,6 +29,7 @@ public class Interruptor : MonoBehaviour
                 on.SetActive(true);
                 off.SetActive(false);
                 tableau.interruptorOn();
+                sound.Play();
             }
         }
     }

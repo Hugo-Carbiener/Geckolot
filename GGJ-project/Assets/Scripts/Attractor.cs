@@ -10,6 +10,7 @@ public class Attractor : MonoBehaviour
     [SerializeField] private float attractionIntensity;
     [SerializeField] private Transform ally;
     [SerializeField] private float maxForce;
+    private PlayerSoundManager playerSound;
     private Rigidbody2D allyRb;
     private Transform player;
     private Animator allyAnim;
@@ -18,6 +19,7 @@ public class Attractor : MonoBehaviour
     private void Awake()
     {
         player = transform;
+        playerSound = GetComponent<PlayerSoundManager>();
         allyRb = ally.GetComponent<Rigidbody2D>();
         allyAnim = ally.GetComponent<Animator>();
         allyPlayer=ally.GetComponent<PlayerController>();
@@ -33,6 +35,11 @@ public class Attractor : MonoBehaviour
                 Vector2 dir = -(ally.position - player.position) / distance;
                 dir *= 1 / distance;
                 allyRb.AddForce(dir * attractionIntensity, ForceMode2D.Impulse);
+                if (allyPlayer.is_tumbled == false)
+                {
+                    playerSound.PlayPowerSound();
+                    allyPlayer.audioManager.PlayThumbleSound();
+                }
                 allyPlayer.is_tumbled=true;
             } else {
             allyPlayer.is_tumbled=false;

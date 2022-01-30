@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blabla: {fileID: 7699698384854898255}
+  masterMixer: {fileID: 0}
 --- !u!82 &7699698384854898255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1245,7 +1246,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 813329617843014556}
   m_HandleRect: {fileID: 813329617886700258}
   m_Direction: 0
-  m_MinValue: 0.01
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -1793,10 +1794,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 813329616403264455}
   m_HandleRect: {fileID: 813329617310611684}
   m_Direction: 0
-  m_MinValue: 0.01
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.992
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

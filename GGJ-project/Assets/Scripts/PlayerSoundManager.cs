@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerSoundManager : MonoBehaviour
 {
-    [SerializeField] AudioClip[] jumpSound;
-    [SerializeField] AudioClip thumbleSound;
-    [SerializeField] AudioClip powerSound;
+    [SerializeField] AudioClip[] jumpFiles;
+    [SerializeField] AudioSource jumpSound;
+    [SerializeField] AudioSource thumbleSound;
+    [SerializeField] AudioSource powerSound;
     private AudioSource source;
     // Start is called before the first frame update
     void Awake()
@@ -22,19 +23,17 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        source.clip = jumpSound[Random.Range(0, jumpSound.Length)];
-        source.Play();
+        jumpSound.clip = jumpFiles[Random.Range(0, jumpFiles.Length)];
+        jumpSound.Play();
     }
 
     public void PlayThumbleSound()
     {
-        source.clip = thumbleSound;
-        source.Play();
+        thumbleSound.PlayDelayed(0.1f);
     }
 
     public void PlayPowerSound()
     {
-        source.clip = powerSound;
-        source.Play();
+        powerSound.Play();
     }
 }
