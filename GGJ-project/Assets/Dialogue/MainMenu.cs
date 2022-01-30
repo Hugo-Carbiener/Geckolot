@@ -1,16 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
 
     [SerializeField] public GameObject settingsPanel;
     public TextWriter textWriter;
+    public GameManager gm;
 
-    public void StartGame()
+    public void Awake()
     {
-
+        gm = FindObjectOfType<GameManager>();
+        if (gm == null)
+        {
+            Debug.LogError("Game Manager not found");
+        }
     }
 
     public void OpenSettings()
@@ -27,6 +34,13 @@ public class MainMenu : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         textWriter.ActivateDialogue();
+        gm.setPlayersControllable(false);
+    }
+
+    public void OpenCredits()
+    {
+        // open credit scene
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
@@ -20,7 +21,14 @@ public class GameManager : MonoBehaviour
     public float transitionDuration;
 
     public DateTime chronometer;
-    
+
+    [SerializeField] public TextWriter textWriter;
+
+    public void Awake()
+    {
+        textWriter = FindObjectOfType<TextWriter>();
+    }
+
     public void ResetProcedure()
     {
         //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
@@ -33,25 +41,23 @@ public class GameManager : MonoBehaviour
 
     public void NextTableau()
     {
-        if (tableauIndex == tableauList.Length)
+        if (tableauIndex == tableauList.Length-1)
         {
-            Debug.Log("Last tableau, next level !");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             return;
         }
         else
         {
             TableauManager nextTableauManager = tableauList[tableauIndex + 1];
-            //Retirer le contrôle des joueurs
             nextTableauManager.enabled = true;
             StartCoroutine(ITableauTransition(nextTableauManager));
             currentTableauManager.enabled = false;
             currentTableauManager = nextTableauManager;
             tableauIndex++;
-            //Rendre le contrôle aux joueurs;
         }
     }
 
-    private void setPlayersControllable(bool val)
+    public void setPlayersControllable(bool val)
     {
         attractor.SetControllable(val);
         attractor.gameObject.GetComponent<Attractor>().setPowerUsable(val);
@@ -91,12 +97,26 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+        
         camera.transform.position = cameraEndPoint;
+        repulsor.transform.position = repulsorEndPoint;
+        attractor.transform.position = attractorEndPoint;
+        repulsor.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        attractor.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        attractor.startAnimation("is_idle");
+        repulsor.startAnimation("is_idle");
         //START DIALOGUE
+        Debug.Log("Dans la coroutine");
+        try
+        {
+            textWriter.ActivateDialogue();
+        }
+        catch (IndexOutOfRangeException e)
+        {
+            Debug.LogError(e.StackTrace);
+        }
         //STOP DIALOGUE : on relâche les joueurs 
-        attractor.startAnimation("is_idle");
-        attractor.startAnimation("is_idle");
-        setPlayersControllable(true);
+        //Les joueurs sont rélâchés dans la méthode AddText de TextWriter
     }
     
     //this function will launch the fading process
@@ -121,9 +141,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            StartCoroutine(ITableauTransition(tableauList[tableauIndex+1]));
-            tableauIndex++;
-            currentTableauManager = tableauList[tableauIndex];
+            // StartCoroutine(ITableauTransition(tableauList[tableauIndex+1]));
+            // tableauIndex++;
+            // currentTableauManager = tableauList[tableauIndex];
+            NextTableau();
         }
 
         if (Input.GetKeyDown(KeyCode.O))
