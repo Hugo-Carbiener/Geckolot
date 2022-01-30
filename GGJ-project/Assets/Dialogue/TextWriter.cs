@@ -125,10 +125,12 @@ public class TextWriter : MonoBehaviour
         if (id == 1)
         {
             ptr[id].sprite = portrait_Axo[emo];
+            sound.setVoice(id);
         }
         else
         {
             ptr[id].sprite = portrait_Geck[emo];
+            sound.setVoice(id);
         }
     }
 
