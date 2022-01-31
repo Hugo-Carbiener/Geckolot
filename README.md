@@ -34,12 +34,12 @@ We were a team of 7 students from [Telecom Sudparis](https://www.telecom-sudpari
 
 ### From left to right :
 
-- [Léo 'ΛεοΛεΛιον' Gizard]() | **Developper and sound designer**
+- [Léo 'ΛεοΛεΛιον' Gizard](https://github.com/LeoLeLion1) | **Developper and sound designer**
 - [Tom 'BowRaiders' Duval](www.linkedin.com/in/tom-duval-imtbs) | **Developper**
-- [Louise 'Lousch' Schnee]() | **Graphist, game designer and lead sound designer**
-- [Guillaume 'Pancho' Caucheteux]() | **Senior developper and Git Wizard**
+- [Louise 'Lousch' Schnee](https://fr.linkedin.com/in/louise-schnee-b37894228) | **Graphist, game designer and lead sound designer**
+- [Guillaume 'Pancho' Caucheteux](https://github.com/PanchoCx) | **Senior developper and Git Wizard**
 - [Henri 'Biscuit Prime' Nomico](https://github.com/BiscuitPrime) | **Lead developper and project manager**
-- [Mathieu 'Timothay' Countant]() | **Game and level designer**
+- [Mathieu 'Timothay' Countant](https://www.linkedin.com/in/mathieu-coutant/) | **Game and level designer**
 - [Hugo 'Kohuro' Carbiener](https://github.com/Hugo-Carbiener) | **Lead Graphist and developper**
 
 ___ 
