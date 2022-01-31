@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private bool isAttractor;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool isGrounded;
@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     public void ResetPlayer(Vector2 position)
     {
         gameObject.transform.position = position;
+        rb.velocity = new Vector2(0, rb.velocity.y);
     }
 
     //this function is the one that handles the animation

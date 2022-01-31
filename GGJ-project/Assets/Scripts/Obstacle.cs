@@ -11,7 +11,6 @@ public class Obstacle : MonoBehaviour
         if (collision.tag == "Player")
         {
             gm.ResetProcedure();
-            Debug.Log("Oof, c'est la mort !");
         }
     }
 

@@ -32,11 +32,8 @@ public class GameManager : MonoBehaviour
     public void ResetProcedure()
     {
         //the coroutine FaderReset() MUST be called by a singular instance (GameManager for ex)
-        StartCoroutine(FaderReset()); 
-        attractor.ResetPlayer(currentTableauManager.GetAttractorSpawnPoint());
-        repulsor.ResetPlayer(currentTableauManager.GetRepulsorSpawnPoint());
-        currentTableauManager.ResetTableau();
-        chronometer = new DateTime();
+        setPlayersControllable(false);
+        StartCoroutine(FaderReset());
     }
 
     public void NextTableau()
@@ -122,9 +119,17 @@ public class GameManager : MonoBehaviour
     //this function will launch the fading process
     private IEnumerator FaderReset()
     {
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeIn();
-        yield return new WaitForSeconds(1f);
-        GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>().LaunchFadeOut();
+        FaderController fader = GameObject.FindGameObjectWithTag("Fader").GetComponent<FaderController>();
+        fader.LaunchFadeIn();
+        yield return new WaitForSeconds(fader.fadeDuration);
+        attractor.ResetPlayer(currentTableauManager.GetAttractorSpawnPoint());
+        repulsor.ResetPlayer(currentTableauManager.GetRepulsorSpawnPoint());
+        fader.LaunchFadeOut();
+        yield return new WaitForSeconds(fader.fadeDuration);
+        Debug.Log("Attractor velocity : "+attractor.rb.velocity+" | Repulsor velocity : "+repulsor.rb.velocity);
+        currentTableauManager.ResetTableau();
+        chronometer = new DateTime();
+        setPlayersControllable(true);
     }
 
     public void Start()
