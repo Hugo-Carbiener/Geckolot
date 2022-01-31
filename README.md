@@ -4,23 +4,23 @@
 
 We made this video game during the 2022 [Global Game Jam](https://globalgamejam.org/) held in Evry-Courcouronnes, France. The objective was to create a video game from scratch as a team in the span of 48 hours.
 
-![GlobalGameJam](ggj.jpg)
+![GlobalGameJam](Ggj.jpg)
 
 
 # **Theme** ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png)
 ### The **theme** of this Game Jam was 
-![duality](duality.png)
+![duality](Duality.png)
 
 This theme brought our reflexion toward a local multiplayer game where the mechanics would make the gameplay either **asymetrical** or **complementary**. This is how the first idea of Geckolot started.
 
 # **Our Game** ![gecko](Gecko2.png) ![gecko](Gecko2.png) ![gecko](Gecko2.png) ![gecko](Gecko2.png) 
-![screenshot](screen1.png)
+![screenshot](Screen1.png)
 It consists in a local two-player player game that relies on the duality between attraction and repulsion. The first player controls an extroverted **Axolotl** that has the power to attract the other player. Symetrically, the second player controls an introverted **Gecko** that tend to push others away. 
 
 ![banner](level2Banner.png)
 Be it to go back home or to finally reach the outside and go explore the world, our two little protagonists will have to work together to get out of the cave.
 
-![screenshot](screen2.png)
+![screenshot](Screen2.png)
 
 
 # **Us** ![axolotl](Axolotl.png) ![axolotl](Axolotl.png) ![axolotl](Axolotl.png) ![axolotl](Axolotl.png)
