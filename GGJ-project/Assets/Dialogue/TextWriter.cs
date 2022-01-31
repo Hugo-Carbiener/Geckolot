@@ -76,7 +76,7 @@ public class TextWriter : MonoBehaviour
         if (currentDialogueId >= dial.Count)
         {
             dialBox.SetActive(false);
-            EnablePlayerMouvment();
+            txt.text = "";
             gm.setPlayersControllable(true);
             return;
         }
@@ -138,18 +138,8 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    public void EnablePlayerMouvment()
-    {
-        // enable player mouv when dialogue is ended;
-        Debug.Log("You can now play !");
-    }
-
     public void ActivateDialogue()
     {
-        Debug.Log(gm);
-        Debug.Log(gm.currentTableauManager);
-        Debug.Log(gm.currentTableauManager.text_for_the_tab);
-        Debug.Log(gm.currentTableauManager.text_for_the_tab.name);
         if (gm.currentTableauManager.text_for_the_tab == null)
         {
             gm.setPlayersControllable(true);
