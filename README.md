@@ -14,7 +14,8 @@ We made this video game during the 2022 [Global Game Jam](https://globalgamejam.
 This theme brought our reflexion toward a local multiplayer game where the mechanics would make the gameplay either **asymetrical** or **complementary**. This is how the first idea of Geckolot started.
 
 # **Our Game** ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko2.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko2.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko2.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko2.png) 
-![screenshot](screen1.PNG)
+
+![screenshot](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/screen1.PNG)
 It consists in a local two-player player game that relies on the duality between attraction and repulsion. The first player controls an extroverted **Axolotl** that has the power to attract the other player. Symetrically, the second player controls an introverted **Gecko** that tend to push others away. 
 
 ![banner](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/level2Banner.png)
@@ -45,7 +46,7 @@ ___
 ___
 
 
-# **Controls** ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png)
+# **Controls** ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png) ![gecko](https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/Gecko.png)
 **Axolotl:** 
 
 Q = Left  
