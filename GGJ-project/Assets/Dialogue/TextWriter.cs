@@ -29,6 +29,7 @@ public class TextWriter : MonoBehaviour
     public List<Image> ptr;
     public GameObject dialBox;
     public TextAsset ta;
+    public GameObject SettingsPanel;
     public int currentDialogueId;
     public float speed;
     [SerializeField] private GameManager gm;
@@ -62,6 +63,11 @@ public class TextWriter : MonoBehaviour
             {
                 AddText();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame(true);
         }
     }
 
@@ -167,6 +173,19 @@ public class TextWriter : MonoBehaviour
     public Dialogue GetSentence(int id)
     {
         return dial.Find(dials => dials.id == id);
+    }
+
+    public void PauseGame(bool status)
+    {
+        SettingsPanel.SetActive(status);
+        if (status)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void AnalyseTextAsset(TextAsset ta)
