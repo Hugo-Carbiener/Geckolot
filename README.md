@@ -7,13 +7,13 @@ We made this video game during the 2022 [Global Game Jam](https://globalgamejam.
 ![GlobalGameJam](ggj.jpg)
 
 
-# **Theme** ![axolotl](axolotl2.png) ![axolotl](axolotl2.png) ![axolotl](axolotl2.png) ![axolotl](axolotl2.png)
+# **Theme** ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png) ![axolotl](Axolotl2.png)
 ### The **theme** of this Game Jam was 
 ![duality](duality.png)
 
 This theme brought our reflexion toward a local multiplayer game where the mechanics would make the gameplay either **asymetrical** or **complementary**. This is how the first idea of Geckolot started.
 
-# **Our Game** ![gecko](gecko2.png) ![gecko](gecko2.png) ![gecko](gecko2.png) ![gecko](gecko2.png) 
+# **Our Game** ![gecko](Gecko2.png) ![gecko](Gecko2.png) ![gecko](Gecko2.png) ![gecko](Gecko2.png) 
 ![screenshot](screen1.png)
 It consists in a local two-player player game that relies on the duality between attraction and repulsion. The first player controls an extroverted **Axolotl** that has the power to attract the other player. Symetrically, the second player controls an introverted **Gecko** that tend to push others away. 
 
@@ -23,7 +23,7 @@ Be it to go back home or to finally reach the outside and go explore the world, 
 ![screenshot](screen2.png)
 
 
-# **Us** ![axolotl](axolotl.png) ![axolotl](axolotl.png) ![axolotl](axolotl.png) ![axolotl](axolotl.png)
+# **Us** ![axolotl](Axolotl.png) ![axolotl](Axolotl.png) ![axolotl](Axolotl.png) ![axolotl](Axolotl.png)
 
 We are immensely proud of the game we came up with at the end of the Jam. The end product was really satisfying despite it being **the first Game Jam ever** for most of the team.
 
@@ -45,7 +45,7 @@ ___
 ___
 
 
-# **Controls** ![gecko](gecko.png) ![gecko](gecko.png) ![gecko](gecko.png) ![gecko](gecko.png)
+# **Controls** ![gecko](Gecko.png) ![gecko](Gecko.png) ![gecko](Gecko.png) ![gecko](Gecko.png)
 **Axolotl:** 
 
 Q = Left  
