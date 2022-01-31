@@ -74,4 +74,4 @@ i = skip a level
 :star: **Do not hesitate to star our repo if you liked it** :star:
 
 
-<img href="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/meme.PNG" align="center"/>
+<img src="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/meme.PNG" align="center"/>
