@@ -125,6 +125,7 @@ MonoBehaviour:
   ta: {fileID: 4900000, guid: d8d167ed3c1d3534eacc04cd307842ed, type: 3}
   currentDialogueId: 0
   speed: 0.045
+  gm: {fileID: 0}
   isWriting: 0
   dial: []
   portrait_Axo:
