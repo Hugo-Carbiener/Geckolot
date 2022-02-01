@@ -46,14 +46,13 @@ public class TextWriter : MonoBehaviour
     void Awake()
     {
         sound = GetComponent<DialogueSoundManager>();
-        //ActivateDialogue();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && dialBox.activeSelf)
         {
             if (isWriting)
             {
@@ -65,7 +64,7 @@ public class TextWriter : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && dialBox.activeSelf == false)
         {
             PauseGame(true);
         }
@@ -73,7 +72,7 @@ public class TextWriter : MonoBehaviour
 
     public void AddText()
     {
-        if (currentDialogueId >= dial.Count)
+        if (currentDialogueId >= dial.Count && dialBox.activeSelf)
         {
             dialBox.SetActive(false);
             txt.text = "";
@@ -168,14 +167,7 @@ public class TextWriter : MonoBehaviour
     public void PauseGame(bool status)
     {
         SettingsPanel.SetActive(status);
-        if (status)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        gm.setPlayersControllable(!status);
     }
 
     public void AnalyseTextAsset(TextAsset ta)
