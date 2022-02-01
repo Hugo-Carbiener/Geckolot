@@ -38,7 +38,7 @@ public class TextWriter : MonoBehaviour
     private int emotion;
     private bool isPaused;
     private string sentence;
-    private DialogueSoundManager sound;
+    [SerializeField] private DialogueSoundManager sound;
     public bool isWriting;
     [SerializeField] List<Dialogue> dial = new List<Dialogue>();
     public List<Sprite> portrait_Axo;
