@@ -29,13 +29,13 @@ public class MainMenu : MonoBehaviour
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
-        textWriter.PauseGame(true);
+        textWriter.PauseGame();
     }
 
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
-        textWriter.PauseGame(false);
+        textWriter.PauseGame();
     }
 
     public void closeMainMenu()

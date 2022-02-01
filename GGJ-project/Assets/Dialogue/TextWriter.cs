@@ -67,7 +67,7 @@ public class TextWriter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && dialBox.activeSelf == false)
         {
-            PauseGame(isPaused);
+            PauseGame();
         }
     }
 
@@ -165,11 +165,23 @@ public class TextWriter : MonoBehaviour
         return dial.Find(dials => dials.id == id);
     }
 
-    public void PauseGame(bool status)
+    public void PauseGame()
     {
+        /*
+        isPaused = !isPaused;
+        
+        gm.setPlayersControllable(!isPaused);
+        */
         isPaused = !isPaused;
         SettingsPanel.SetActive(isPaused);
-        gm.setPlayersControllable(!isPaused);
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void AnalyseTextAsset(TextAsset ta)
