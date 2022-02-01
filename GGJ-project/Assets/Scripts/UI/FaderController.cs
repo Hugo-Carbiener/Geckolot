@@ -7,9 +7,11 @@ public class FaderController : MonoBehaviour
     private IEnumerator coroutine;
     private Color faderColor;
     private float alpha=0f;
-
+    [SerializeField] public float fadeDuration;
+    
     public void LaunchFadeIn()
     {
+        alpha = 0f;
         coroutine = FadeIn();
         StartCoroutine(coroutine);
     }
@@ -23,21 +25,23 @@ public class FaderController : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        while(alpha<1f)
+        
+        while (alpha < 1)
         {
-            yield return new WaitForSeconds(0.02f);
-            alpha+=0.05f;
+            alpha += Time.unscaledDeltaTime / fadeDuration;
             GetComponent<SpriteRenderer>().color= new Color(0f,0f,0f,alpha);
+            yield return null;
         }
     }
 
     private IEnumerator FadeOut()
     {
-        while(alpha>0f)
+        while (alpha > 0)
         {
-            yield return new WaitForSeconds(0.02f);
-            alpha-=0.05f;
+            alpha -= Time.unscaledDeltaTime / fadeDuration;
             GetComponent<SpriteRenderer>().color= new Color(0f,0f,0f,alpha);
+            yield return null;
+
         }
     }
 }
