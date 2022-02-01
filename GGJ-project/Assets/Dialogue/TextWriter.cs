@@ -36,6 +36,7 @@ public class TextWriter : MonoBehaviour
     private int index;
     private int charact;
     private int emotion;
+    private bool isPaused;
     private string sentence;
     private DialogueSoundManager sound;
     public bool isWriting;
@@ -66,7 +67,7 @@ public class TextWriter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && dialBox.activeSelf == false)
         {
-            PauseGame(true);
+            PauseGame(isPaused);
         }
     }
 
@@ -166,8 +167,9 @@ public class TextWriter : MonoBehaviour
 
     public void PauseGame(bool status)
     {
-        SettingsPanel.SetActive(status);
-        gm.setPlayersControllable(!status);
+        isPaused = !isPaused;
+        SettingsPanel.SetActive(isPaused);
+        gm.setPlayersControllable(!isPaused);
     }
 
     public void AnalyseTextAsset(TextAsset ta)

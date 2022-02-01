@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     public void OpenSettings()
     {
         settingsPanel.SetActive(true);
+        textWriter.PauseGame(true);
     }
 
     public void CloseSettings()
