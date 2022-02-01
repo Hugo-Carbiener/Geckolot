@@ -36,12 +36,18 @@ public class TextWriter : MonoBehaviour
     private int charact;
     private int emotion;
     private string sentence;
-    [SerializeField] private DialogueSoundManager sound;
+    private DialogueSoundManager sound;
     public bool isWriting;
     [SerializeField] List<Dialogue> dial = new List<Dialogue>();
     public List<Sprite> portrait_Axo;
     public List<Sprite> portrait_Geck;
-    
+
+    void Awake()
+    {
+        sound = GetComponent<DialogueSoundManager>();
+        //ActivateDialogue();
+    }
+
     // Update is called once per frame
     void Update()
     {
