@@ -68,9 +68,12 @@ i = skip a level
 
 # **Find us**
 
-<a href="https://mathieu-coutant.itch.io/geckolot"><img src="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/itchio.png" width="40%" height="20%" style="margin-right: 50"/></a><a href="https://globalgamejam.org/2022/games/geckolot-2"><img src="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/globalgamejam.png" width="50%" height="20%"/></a>
+<h3 align="center">PLAY OUR GAME HERE, ON ITCHI.IO</h3>
+<a href="https://mathieu-coutant.itch.io/geckolot"><img src="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/itchio.png" width="40%" height="20%""/></a>
+</br>
+<a href="https://globalgamejam.org/2022/games/geckolot-2" align="center"><img src="https://github.com/Hugo-Carbiener/Geckolot/blob/Readme/ReadeMeResources/globalgamejam.png" width="50%" height="20%"/></a>
 
-
+</br>
 :star: **Do not hesitate to star our repo if you liked it** :star:
 
 
