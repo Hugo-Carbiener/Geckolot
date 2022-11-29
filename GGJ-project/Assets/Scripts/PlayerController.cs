@@ -65,6 +65,9 @@ public class PlayerController : MonoBehaviour
                 Jump();
                 anim.SetBool("is_jumping", true);
             }
+
+            //IoT version :
+            //TODO
         }
         else
         {
