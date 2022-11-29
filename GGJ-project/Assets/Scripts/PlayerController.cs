@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Net;
 
 //This script is used by the player
 //it will direct the player with the inputs
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer renderer;
     public bool is_tumbled;
 
+    //IoT VARIABLES :
+
+    
     // Start is called before the first frame update
     void Start()
     {
