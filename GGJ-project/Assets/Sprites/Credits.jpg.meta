@@ -510,7 +510,7 @@ TextureImporter:
       213: 4587352548267420333
     second: Credits_168
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -527,10 +527,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -569,6 +571,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -584,6 +588,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: 4
@@ -4156,9 +4208,178 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Credits_38: 8107296410963631499
+      Credits_156: 8472440116242676644
+      Credits_45: 818080339820172101
+      Credits_110: 7826241555943943420
+      Credits_27: -7435805694742506557
+      Credits_72: 3583062187765805876
+      Credits_130: 2779137317888077860
+      Credits_82: -6701962988932493467
+      Credits_10: 8797275395211412286
+      Credits_42: 5271910430097823472
+      Credits_50: -5813130595025988439
+      Credits_56: -9120482690585546202
+      Credits_129: -1102105026010839263
+      Credits_37: 5190364356421060852
+      Credits_5: 7564604414351219451
+      Credits_114: 8018645913062011491
+      Credits_74: -7056995538712055375
+      Credits_17: 3290263840607619549
+      Credits_18: 9204136936415936416
+      Credits_96: 9031758938119390037
+      Credits_99: 4696059012164892364
+      Credits_158: 8938205975660019574
+      Credits_159: -3318623918527418063
+      Credits_123: -1260180876615869310
+      Credits_22: -1092723661551015997
+      Credits_59: -838815139108367285
+      Credits_146: 8610963777422655353
+      Credits_77: -387831058414199422
+      Credits_91: -7896552780637660548
+      Credits_16: 7047169857006248202
+      Credits_141: 7951187413681235973
+      Credits_135: -3334268667760281719
+      Credits_152: -723365756009666539
+      Credits_54: 2293913136940236138
+      Credits_69: 4517987917224175508
+      Credits_95: -8701758402948266778
+      Credits_115: -8378434788416727199
+      Credits_48: -2533622099675618672
+      Credits_124: -551270832017992013
+      Credits_11: -8807754293397422043
+      Credits_157: 4535440284415510069
+      Credits_108: -3785054418637578930
+      Credits_149: 9003050672200660162
+      Credits_153: -7408771192580636721
+      Credits_109: -3722476263841126513
+      Credits_47: -9119572553111267631
+      Credits_28: 4811274197736627558
+      Credits_143: -653132443441269553
+      Credits_140: 8392840617090688324
+      Credits_137: -1843864712857496110
+      Credits_105: 7903080765271685702
+      Credits_58: -5273867085708969707
+      Credits_117: 5731043495422925216
+      Credits_164: 8093263829410698719
+      Credits_145: -697152717109424689
+      Credits_3: 3408833089268186296
+      Credits_31: 703393842733655496
+      Credits_1: -7230797560680492228
+      Credits_34: -2112962692360016331
+      Credits_116: 4907981687800159100
+      Credits_161: -5559766722269303360
+      Credits_138: 360830577149820788
+      Credits_81: -4529786803053044705
+      Credits_23: -4067745812954309902
+      Credits_35: 1528216331216069156
+      Credits_25: -8020743857437402204
+      Credits_32: 925404036450712297
+      Credits_64: 8337444005325283311
+      Credits_14: -9177504337937311271
+      Credits_136: -3344107139306805979
+      Credits_66: 6458028872901474128
+      Credits_168: 4587352548267420333
+      Credits_79: -5980674278125786369
+      Credits_165: 3330967085220265034
+      Credits_26: -1707268780483616576
+      Credits_63: 2853589522966179873
+      Credits_83: 4926373980103304550
+      Credits_41: -101024722954617141
+      Credits_89: 5832524828604898132
+      Credits_51: -5366165906611256364
+      Credits_2: 1660878261141922055
+      Credits_76: -25874537707878238
+      Credits_13: 1630782524059220213
+      Credits_73: 2062146671056262039
+      Credits_85: 4722335282892624371
+      Credits_43: -1609787625652435480
+      Credits_97: -6768864449366376939
+      Credits_55: -1283160570801906291
+      Credits_98: 1824308576405264253
+      Credits_142: 1741402610105474459
+      Credits_12: 6445232148424872261
+      Credits_33: -6278944701600896918
+      Credits_128: -5846498938598434
+      Credits_93: 566721998694871654
+      Credits_126: 7864171847809332399
+      Credits_139: -2458869455247946552
+      Credits_24: 1225677040164306014
+      Credits_36: 4145655376082138389
+      Credits_6: -8157575453700540238
+      Credits_52: -5650160083840594953
+      Credits_60: 5130481961320904317
+      Credits_121: 5127421514453947546
+      Credits_154: 8257516801147758212
+      Credits_160: -242544271115684066
+      Credits_80: -2208429170060910351
+      Credits_148: 5813316195583996912
+      Credits_7: -202475513557698636
+      Credits_132: 9090159328896264153
+      Credits_92: 6180729606825431814
+      Credits_19: -480849289139999304
+      Credits_29: 3838052724125630978
+      Credits_9: 3924323341162010572
+      Credits_39: 5410365006789895169
+      Credits_101: 7155464444633835958
+      Credits_44: -7398404747462883220
+      Credits_8: 5436393710764927355
+      Credits_86: -7279700076685891354
+      Credits_75: -2492971312439272412
+      Credits_150: -1768867402225926785
+      Credits_67: -4040901853779264520
+      Credits_87: -4669125105293181303
+      Credits_53: 8277351139229149077
+      Credits_151: -1390601699618830592
+      Credits_90: 5471427806547639650
+      Credits_120: -2098437077615501638
+      Credits_118: 1283462702100455696
+      Credits_112: -9177152237872701829
+      Credits_78: -7300817402216948756
+      Credits_147: 5419522746260272019
+      Credits_127: 6223606182591036077
+      Credits_131: 6551409876785244189
+      Credits_106: -3600290624325376677
+      Credits_104: 346791510566886178
+      Credits_68: 6811233256373712434
+      Credits_21: 24065748839010599
+      Credits_100: 1794829217805362552
+      Credits_113: -2103480704497460225
+      Credits_107: -532519267381964349
+      Credits_62: 7507769155883281487
+      Credits_166: -5285783097455757040
+      Credits_88: -5968611803804914996
+      Credits_61: -6224189913718994972
+      Credits_162: 7591695337293684595
+      Credits_20: 4079438442943446260
+      Credits_40: 3942010439193862201
+      Credits_111: 6662737647814065058
+      Credits_122: 5225974550914665109
+      Credits_49: -7182258688543430514
+      Credits_4: -4505729462688360816
+      Credits_30: 1212123827019029573
+      Credits_102: -3829708633479763058
+      Credits_57: 4809095481539625308
+      Credits_155: -8252213414440354059
+      Credits_70: 1886743527141787242
+      Credits_71: 5523187760008268946
+      Credits_167: -5305061165966218290
+      Credits_133: -667019901155811317
+      Credits_94: -949700524626380056
+      Credits_65: -1395524030634522591
+      Credits_163: 2905183888887274500
+      Credits_84: 5466168360010623422
+      Credits_15: 5713858861112880991
+      Credits_134: 302340127416148888
+      Credits_144: -4258190535473586106
+      Credits_103: 1672557976184049639
+      Credits_125: 5867609266262937813
+      Credits_119: 6540417954328973347
+      Credits_0: 325440641546151924
+      Credits_46: -3696340221096475299
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

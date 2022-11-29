@@ -303,7 +303,7 @@ TextureImporter:
       213: 8491505860749826732
     second: tilemap_moss_99
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -320,10 +320,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -362,6 +364,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -413,6 +417,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -2968,9 +2984,109 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tilemap_moss_29: 4220012105149166861
+      tilemap_moss_35: 4611145774014336115
+      tilemap_moss_42: -8734505837289036658
+      tilemap_moss_40: 9218587332734462676
+      tilemap_moss_53: -3250673626027775880
+      tilemap_moss_81: -2171750151552917241
+      tilemap_moss_94: -7606442416416009878
+      tilemap_moss_49: 6318780335325778456
+      tilemap_moss_99: 8491505860749826732
+      tilemap_moss_23: -3464882785233874966
+      tilemap_moss_11: 7708570801676293090
+      tilemap_moss_10: -920212510373082380
+      tilemap_moss_45: -8709527397888862494
+      tilemap_moss_76: -8222967317821254739
+      tilemap_moss_43: -598172993063599073
+      tilemap_moss_68: 834861551440541490
+      tilemap_moss_50: -9033115083574773325
+      tilemap_moss_95: 6459836025224580713
+      tilemap_moss_25: -8239688639385918212
+      tilemap_moss_46: 6137297858755383168
+      tilemap_moss_91: -7167947988969878235
+      tilemap_moss_98: -9176984431646324757
+      tilemap_moss_89: -6032470765118285451
+      tilemap_moss_84: -1222178395350093538
+      tilemap_moss_3: -8915527879946714472
+      tilemap_moss_75: 4279389825974536606
+      tilemap_moss_60: 1853648423691866601
+      tilemap_moss_80: 6447297313888254007
+      tilemap_moss_66: 4299976951266635276
+      tilemap_moss_57: -808138940075831957
+      tilemap_moss_32: 6517641058049391398
+      tilemap_moss_36: -1686343573110222392
+      tilemap_moss_22: -5501498897182195377
+      tilemap_moss_51: -7030139695465833339
+      tilemap_moss_71: -969806991809793236
+      tilemap_moss_5: 4368012309844878731
+      tilemap_moss_47: -3161177316518409569
+      tilemap_moss_20: 7672229619254156847
+      tilemap_moss_82: -8007233567688844893
+      tilemap_moss_39: -8889843525760205266
+      tilemap_moss_72: -7469464890372145196
+      tilemap_moss_78: 5170198446900361602
+      tilemap_moss_15: -2145343145697203993
+      tilemap_moss_41: 6301568265846922241
+      tilemap_moss_21: 6130517420788608888
+      tilemap_moss_17: -4423289043924686933
+      tilemap_moss_64: -4163092117703205819
+      tilemap_moss_70: 6579539424022677400
+      tilemap_moss_92: 3585211368901209327
+      tilemap_moss_65: 3779317837017701466
+      tilemap_moss_18: -496805889714629491
+      tilemap_moss_12: 7341016110154200726
+      tilemap_moss_37: -181595819159659515
+      tilemap_moss_28: 7713630814047220743
+      tilemap_moss_8: -8875193034320649278
+      tilemap_moss_55: -8968203094157547022
+      tilemap_moss_67: -7842144700441119010
+      tilemap_moss_52: 3719688420490240302
+      tilemap_moss_27: 2279390121177968195
+      tilemap_moss_58: -4127765205447164858
+      tilemap_moss_13: -5025046563389288853
+      tilemap_moss_16: -822869220937907068
+      tilemap_moss_4: 6928329796285067681
+      tilemap_moss_24: -2195978100045594188
+      tilemap_moss_90: -6373490415844242166
+      tilemap_moss_73: 8993196050107941538
+      tilemap_moss_9: 3660878994556479121
+      tilemap_moss_44: 6191279502730407030
+      tilemap_moss_14: -5685699099680253797
+      tilemap_moss_30: 6079372701842199584
+      tilemap_moss_86: -5382679937810019
+      tilemap_moss_93: 5670210598459292113
+      tilemap_moss_85: 3709591226539293966
+      tilemap_moss_59: -4877061785854441979
+      tilemap_moss_77: -5380206367220524413
+      tilemap_moss_7: -7315930427777436616
+      tilemap_moss_61: 2519659182940976395
+      tilemap_moss_97: 2667290090677320212
+      tilemap_moss_0: -7086314496045490933
+      tilemap_moss_88: 3995495176801886015
+      tilemap_moss_26: -3663318069282906627
+      tilemap_moss_87: 5998363254103200409
+      tilemap_moss_33: 2816823096353258487
+      tilemap_moss_34: 3806387855611524185
+      tilemap_moss_83: -1778762951217218093
+      tilemap_moss_48: 5259352235769340830
+      tilemap_moss_96: -6519595366601063257
+      tilemap_moss_19: -598243648492735259
+      tilemap_moss_6: -5487107153749347946
+      tilemap_moss_63: 1778829340556089184
+      tilemap_moss_56: -7911702251414526024
+      tilemap_moss_38: -5506382375717526166
+      tilemap_moss_62: -2520749547172127030
+      tilemap_moss_2: 7630758296394377947
+      tilemap_moss_69: -1429291114773885754
+      tilemap_moss_54: -1355586915232218673
+      tilemap_moss_79: -1327520575347221052
+      tilemap_moss_31: 5013349221140817644
+      tilemap_moss_1: -8148418314935192905
+      tilemap_moss_74: 3755078503185082191
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

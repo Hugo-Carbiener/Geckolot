@@ -57,7 +57,7 @@ TextureImporter:
       213: -462428115691143653
     second: plateforme_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,10 +74,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -116,6 +118,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -167,6 +171,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -568,9 +584,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      plateforme_6: 3845109452089933761
+      plateforme_13: 3621938883828677206
+      plateforme_8: 1914564814355957304
+      plateforme_9: 5305309027044001445
+      plateforme_0: 3182500231822754245
+      plateforme_7: -4391967172264360946
+      plateforme_2: -7625250921338426240
+      plateforme_12: -2343323838343074974
+      plateforme_5: 8520818496019846624
+      plateforme_4: -2446089246198017659
+      plateforme_10: -8527243246711329300
+      plateforme_1: -8335453268366291970
+      plateforme_16: 2588063510101711289
+      plateforme_14: -4011382518295692342
+      plateforme_15: 8466529647860765861
+      plateforme_17: -462428115691143653
+      plateforme_11: 8243745803061582589
+      plateforme_3: -793899099361120375
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

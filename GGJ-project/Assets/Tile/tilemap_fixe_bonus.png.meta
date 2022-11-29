@@ -93,7 +93,7 @@ TextureImporter:
       213: -6695003072001928115
     second: tilemap_fixe_bonus_29
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,10 +110,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -152,6 +154,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -179,6 +183,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -832,9 +872,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tilemap_fixe_bonus_16: -8971903937930492112
+      tilemap_fixe_bonus_21: 250609711736564871
+      tilemap_fixe_bonus_23: 1916733882152520656
+      tilemap_fixe_bonus_7: 87539216711771182
+      tilemap_fixe_bonus_22: -1788965836778965601
+      tilemap_fixe_bonus_11: 5259217708586522477
+      tilemap_fixe_bonus_9: -5881701034289141522
+      tilemap_fixe_bonus_8: -899193688885783209
+      tilemap_fixe_bonus_29: -6695003072001928115
+      tilemap_fixe_bonus_20: 2629134316019084380
+      tilemap_fixe_bonus_17: -3275287422641931040
+      tilemap_fixe_bonus_14: -4043465759294611024
+      tilemap_fixe_bonus_3: -3508097003373187014
+      tilemap_fixe_bonus_26: 4745967162411550525
+      tilemap_fixe_bonus_0: 5355862284222955595
+      tilemap_fixe_bonus_12: 2366953058216129892
+      tilemap_fixe_bonus_4: 5813811117350416309
+      tilemap_fixe_bonus_5: -6862562600242173315
+      tilemap_fixe_bonus_10: -7114048406619154602
+      tilemap_fixe_bonus_15: -8048819101537483081
+      tilemap_fixe_bonus_19: -4786128687221276013
+      tilemap_fixe_bonus_27: 9145340153478258858
+      tilemap_fixe_bonus_18: -9165574139017695321
+      tilemap_fixe_bonus_24: -4485461168622939223
+      tilemap_fixe_bonus_28: -4725820237972541823
+      tilemap_fixe_bonus_1: -8403933081293733716
+      tilemap_fixe_bonus_2: 2703412113825166864
+      tilemap_fixe_bonus_25: 3378268441010615932
+      tilemap_fixe_bonus_6: 454814353390752596
+      tilemap_fixe_bonus_13: 2191947144318750939
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
