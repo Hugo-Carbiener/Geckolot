@@ -53,14 +53,14 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("is_running", true);
             }
 
-            if (Input.GetKey("q"))
+            if (Input.GetKey("q") || Input.GetKey("a"))
             {
                 horizontal_input -= 1;
                 renderer.flipX = true;
                 anim.SetBool("is_running", true);
             }
 
-            if (Input.GetKeyDown("z") && isGrounded)
+            if ((Input.GetKeyDown("z") || Input.GetKey("w")) && isGrounded)
             {
                 Jump();
                 anim.SetBool("is_jumping", true);
