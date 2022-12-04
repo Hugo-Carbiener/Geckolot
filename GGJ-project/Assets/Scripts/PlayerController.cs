@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     public bool is_tumbled;
 
     //IoT VARIABLES :
-
+    private SerialHandler serial;
+    public int IoTX;
+    public int IoTY;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,9 @@ public class PlayerController : MonoBehaviour
         anim=this.GetComponent<Animator>();
         renderer=this.GetComponent<SpriteRenderer>();
         audioManager = GetComponent<PlayerSoundManager>();
+        serial = GetComponent<SerialHandler>();
+        IoTX = 0;
+        IoTY = 0;
     }
 
 
@@ -71,7 +76,25 @@ public class PlayerController : MonoBehaviour
             }
 
             //IoT version :
-            //TODO
+            if (IoTX > 20)
+            {
+                horizontal_input += 1;
+                renderer.flipX = false;
+                anim.SetBool("is_running", true);
+            }
+
+            if (IoTX < -20)
+            {
+                horizontal_input -= 1;
+                renderer.flipX = true;
+                anim.SetBool("is_running", true);
+            }
+
+            if (IoTY > 20 && isGrounded)
+            {
+                Jump();
+                anim.SetBool("is_jumping", true);
+            }
         }
         else
         {
@@ -98,6 +121,17 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(horizontal_input * speed, rb.velocity.y);
         Animation();
+
+        //IOT :
+        if(serial != null)
+        {
+            serial.isTakingPower = 0;
+            if (is_tumbled)
+            {
+                Debug.Log("IOT : CONTACT DONE -> SENDING MSG TO ARDUINO");
+                serial.isTakingPower = 1;
+            }
+        }
     }
 
     //the function used to jump :
