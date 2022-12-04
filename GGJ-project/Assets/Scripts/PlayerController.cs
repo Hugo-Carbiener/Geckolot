@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("is_jumping", true);
             }
 
-            //IoT version :
+            // -------------------------------------------------------------------------- IoT version --------------------------------------------------------------------------
             if (IoTX > 20)
             {
                 horizontal_input += 1;
@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
                 Jump();
                 anim.SetBool("is_jumping", true);
             }
+            // -------------------------------------------------------------------------- IoT version --------------------------------------------------------------------------
         }
         else
         {
@@ -117,6 +118,28 @@ public class PlayerController : MonoBehaviour
                 Jump();
                 anim.SetBool("is_jumping", true);
             }
+
+            // -------------------------------------------------------------------------- IoT version --------------------------------------------------------------------------
+            if (IoTX > 20)
+            {
+                horizontal_input += 1;
+                anim.SetBool("is_running", true);
+                renderer.flipX = false;
+            }
+
+            if (IoTX < -20)
+            {
+                horizontal_input -= 1;
+                renderer.flipX = true;
+                anim.SetBool("is_running", true);
+            }
+
+            if (IoTY > 20 && isGrounded)
+            {
+                Jump();
+                anim.SetBool("is_jumping", true);
+            }
+            // -------------------------------------------------------------------------- IoT version --------------------------------------------------------------------------
         }
 
         rb.velocity = new Vector2(horizontal_input * speed, rb.velocity.y);
