@@ -18,6 +18,10 @@ public class Repulsor : MonoBehaviour
     private Animator allyAnim;
     private PlayerController allyPlayer;
 
+    //IOT
+    public bool powerActive;
+    public bool IoT;
+
     private void Awake()
     {
         player = transform;
@@ -25,6 +29,7 @@ public class Repulsor : MonoBehaviour
         allyRb = ally.GetComponent<Rigidbody2D>();
         allyAnim = ally.GetComponent<Animator>();
         allyPlayer=ally.GetComponent<PlayerController>();
+        powerActive = false;
     }
     
     public void setPowerUsable(bool val)
@@ -35,25 +40,58 @@ public class Repulsor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.RightShift) && isPowerUsable)
+        if (!IoT)
         {
-            float distance = Vector2.Distance(ally.position, player.position);
-            if (distance < range && distance > 0.6)
+            if (Input.GetKey(KeyCode.RightShift) && isPowerUsable)
             {
-                repulsorPower.SetActive(true);
-                Vector2 dir = (ally.position - player.position) / distance;
-                dir *= 1 / distance;
-                allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
-                if (allyPlayer.is_tumbled == false)
+                float distance = Vector2.Distance(ally.position, player.position);
+                if (distance < range && distance > 0.6)
                 {
-                    playerSound.PlayPowerSound();
-                    allyPlayer.audioManager.PlayThumbleSound();
+                    repulsorPower.SetActive(true);
+                    Vector2 dir = (ally.position - player.position) / distance;
+                    dir *= 1 / distance;
+                    allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
+                    if (allyPlayer.is_tumbled == false)
+                    {
+                        playerSound.PlayPowerSound();
+                        allyPlayer.audioManager.PlayThumbleSound();
+                    }
+                    allyPlayer.is_tumbled = true;
                 }
-                allyPlayer.is_tumbled=true;
+
             }
-        } else {
-            allyPlayer.is_tumbled=false;
-            repulsorPower.SetActive(false);
+            else
+            {
+                allyPlayer.is_tumbled = false;
+                repulsorPower.SetActive(false);
+            }
         }
+        else
+        {
+            if (powerActive && isPowerUsable)
+            {
+                float distance = Vector2.Distance(ally.position, player.position);
+                if (distance < range && distance > 0.6)
+                {
+                    repulsorPower.SetActive(true);
+                    Vector2 dir = (ally.position - player.position) / distance;
+                    dir *= 1 / distance;
+                    allyRb.AddForce(dir * repulsionIntensity, ForceMode2D.Impulse);
+                    if (allyPlayer.is_tumbled == false)
+                    {
+                        playerSound.PlayPowerSound();
+                        allyPlayer.audioManager.PlayThumbleSound();
+                    }
+                    allyPlayer.is_tumbled = true;
+                }
+
+            }
+            else
+            {
+                allyPlayer.is_tumbled = false;
+                repulsorPower.SetActive(false);
+            }
+        }
+        
     }
 }
